@@ -1,27 +1,20 @@
 import { useEffect, useState } from 'react'
 import getTopMovies from '.'
+import { UseDispatch, useDispatch, useSelector } from 'react-redux'
+import { fetchData, fetchDataError, fetchDataSuccess } from '../../reducers'
+import { RootState } from '../../store'
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
 
 export default function HomePage() {
-	const [loading, setLoading] = useState(true)
-	const [movies, setMovies] = useState([])
-
-
+	const dispatch = useAppDispatch()
+	const { data, loading, error } = useAppSelector(state => state.movies)
 
 	useEffect(() => {
-		async function fetchData() {
-			try {
-				setLoading(true)
-				const data = await getTopMovies()
-				setMovies(data)
-			} catch (error) {
-				console.log(error)
-			} finally{
-				setLoading(false)
-			}
-		}
-//Проверить в глобал стейте
-		fetchData()
-	}, [])
+		dispatch(fetchData())
+		getTopMovies().then(response => dispatch(fetchDataSuccess(response)))
+		.catch((error)=> dispatch(fetchDataError(error.message)))
+	}, [dispatch])
+	
 	return (
 		<>
 			<h1>Top Movies</h1>
@@ -29,7 +22,7 @@ export default function HomePage() {
 				<div>Loading...</div>
 			) : (
 				<ul>
-					{movies.map((movie: any) => {
+					{data.map((movie: any) => {
 						return <li>{movie.Title}</li>
 					})}
 				</ul>
