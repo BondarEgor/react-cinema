@@ -1,32 +1,36 @@
-import { useEffect, useState } from 'react'
-import getTopMovies from '.'
-import { UseDispatch, useDispatch, useSelector } from 'react-redux'
-import { fetchData, fetchDataError, fetchDataSuccess } from '../../reducers'
-import { RootState } from '../../store'
+import { useEffect } from 'react'
+import getTopMovies from './topMovies'
+import {
+	fetchDataError,
+	fetchDataSuccess,
+	fetchMovies,
+} from '../../features/movies/moviesSlice'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
+import { Settings } from '@mui/icons-material'
+import { ButtonGroup, Button, IconButton, Stack } from '@mui/material'
+import { filterButtons } from './filterButtons'
 
 export default function HomePage() {
 	const dispatch = useAppDispatch()
-	const { data, loading, error } = useAppSelector(state => state.movies)
+	const { data, loading } = useAppSelector(state => state.movies)
 
 	useEffect(() => {
-		dispatch(fetchData())
-		getTopMovies().then(response => dispatch(fetchDataSuccess(response)))
-		.catch((error)=> dispatch(fetchDataError(error.message)))
+		dispatch(fetchMovies())
+		getTopMovies()
+			.then(response => {
+				dispatch(fetchDataSuccess(response))
+			})
+			.catch(error => dispatch(fetchDataError(error.message)))
 	}, [dispatch])
-	
+
 	return (
 		<>
-			<h1>Top Movies</h1>
-			{loading ? (
-				<div>Loading...</div>
-			) : (
-				<ul>
-					{data.map((movie: any) => {
-						return <li>{movie.Title}</li>
-					})}
-				</ul>
-			)}
+			<h1 className='text-3xl'>My cinema</h1>
+			<Stack spacing={2} direction='row'>
+				{filterButtons.map(btnText => (
+					<Button variant='contained' color='warning'>{btnText}</Button>
+				))}
+			</Stack>
 		</>
 	)
 }

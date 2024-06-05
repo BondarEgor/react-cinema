@@ -10,7 +10,7 @@ export default function SidebarLink({ href, icon }: SidebarLinkProps) {
 		<li>
 			<Link
 				to={href}
-				className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'
+				className='flex items-center p-2 text-gray-900 rounded-lg dark:text-[#65676A] hover:bg-gray-100 dark:hover:bg-gray-700 group dark:hover:text-white'
 			>
 				<div>{icon}</div>
 			</Link>
