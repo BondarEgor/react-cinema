@@ -4,9 +4,11 @@ import { Routings } from './routes'
 function App() {
 	return (
 		<Router>
+			<div className='flex w-screen h-screen'>
 			<Sidebar></Sidebar>
-			<div className='ml-20 mt-4'>
+			<div className='mx-10 mt-8 flex-1'>
 				<Routings/>
+			</div>
 			</div>
 		</Router>
 	)

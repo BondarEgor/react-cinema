@@ -1,12 +1,3 @@
-interface Movies {
-	Position: string,
-	Title: string,
-	ID: string,
-	Rating: string,
-	Thumbnail: string,
-	Link: string
-}
-
 export default async function getTopMovies() {
 	const url = 'https://aiom-db-all-in-one-movie-database.p.rapidapi.com/showtime/?mode=popular'
 	const result = await fetch(url,{
