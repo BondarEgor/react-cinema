@@ -6,10 +6,11 @@ import SearchPage from './pages/SearchPage'
 import AuthPage from './pages/AuthPage'
 import NotFoundPage from './pages/NotFoundPage'
 import ErrorPage from './pages/ErrorPage'
-import { useRoutes } from 'react-router-dom'
+import { Navigate, useRoutes } from 'react-router-dom'
 
 const routes = [
-	{ path: '/', element: <HomePage /> },
+	{ path: '/', element: <Navigate to='home' replace />},
+	{ path: 'home', element: <HomePage /> },
 	{ path: 'profile', element: <ProfilePage /> },
 	{ path: 'settings', element: <SettingsPage /> },
 	{ path: 'favorites', element: <FavoritesPage /> },

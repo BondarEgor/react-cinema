@@ -7,9 +7,10 @@ import {
 } from '../../features/movies/moviesSlice';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { filterButtons } from './filterButtons';
-import MovieCard from '../../components/MovieCard/MovieCard';
-import './HomePage.css';
+import MovieCard from '../../components/MovieCardBig/MovieCardBig';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup'
+import MovieCardSmall from '../../components/MovieCardSmall/MovieCardSmall'
+// import CustomCarousel from '../../components/Carousel/Carousel'
 
 const movie = {
   title: 'Inception',
@@ -36,14 +37,17 @@ export default function HomePage() {
   }, [dispatch]);
 
   return (
-    <>
-      <h1 className="text-3xl">My cinema</h1>
-      <div className="mt-10">
+    <div>
+      <h1 className="text-3xl font-extrabold">My cinema</h1>
+      <div className="mt-3">
 				<ButtonGroup buttons={filterButtons} />
-        <div className="flex justify-between mt-10">
+        <div className="flex gap-8 mt-5">
           <MovieCard movie={movie} />
+          <MovieCardSmall/> 
         </div>
       </div>
-    </>
-  );
+      <h2 className='text-3xl font-extrabold mt-5'>Special for you</h2>
+      {/* <CustomCarousel /> */}
+    </div>
+  )
 }

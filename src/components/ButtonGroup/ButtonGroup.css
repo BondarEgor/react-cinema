@@ -1,10 +1,19 @@
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .custom-button {
   text-transform: capitalize;
+  font-size: 20px;
+  font-weight: normal;
   border-radius: 50px;
-  padding: 8px 58px;
   color: white;
   background-color: #292B30;
   transition: background-color 0.3s;
+  flex-grow: 1;
+  display: flex;
 }
 
 .custom-button:hover {
