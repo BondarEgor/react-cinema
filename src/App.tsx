@@ -6,7 +6,7 @@ function App() {
 		<Router>
 			<div className='flex w-screen h-screen'>
 				<Sidebar></Sidebar>
-				<div className='mx-10 mt-8 flex-1'>
+				<div className='mx-10 mt-8 flex-1 max-w-[calc(100vw-var(--sidebar-size))]'>
 					<Routings />
 				</div>
 			</div>

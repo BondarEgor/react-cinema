@@ -14,7 +14,7 @@ export default function Sidebar() {
 	}, [location.pathname])
 	return (
 		<>
-			<aside className='sidebar'>
+			<aside className='sidebar h-screen'>
 				<div className='sidebar container'>
 					<ul className='space-y-2 font-medium'>
 						{links.map((link, index) => (
