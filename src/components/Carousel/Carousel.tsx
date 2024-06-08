@@ -2,31 +2,34 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MovieCardSmall from '../MovieCardSmall/MovieCardSmall';
+import CarouselCard from '../CarouselCard/CarouselCard';
+import { Box } from '@mui/material';
+import { responsive } from './responsive'
 
 export default function CustomCarousel() {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
-    initialSlide: 0
+    initialSlide: 0,
+    responsive: responsive
   };
 
   return (
-    <div className="slider-container" style={{  }}>
-      <Slider  {...settings} >
+      <Slider {...settings}>
         <div>
-          <MovieCardSmall />
+          <CarouselCard />
         </div>
         <div>
-          <MovieCardSmall />
+          <CarouselCard />
         </div>
         <div>
-          <MovieCardSmall />
+          <CarouselCard />
+        </div>
+        <div>
+          <CarouselCard />
         </div>
       </Slider>
-    </div>
   );
 }

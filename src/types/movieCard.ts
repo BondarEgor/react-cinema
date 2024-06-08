@@ -1,10 +1,10 @@
 export interface MoviesCard {
-	title:string,
-	description: string,
-	duration: string,
-	genre: string,
-	year: string,
-	image: string,
+  Id: string;
+  Title: string;
+  Rating: string;
+  Thumbnail: string;
+  Link: string;
+  Position: number;
 }
 
 export interface MoviesCardProps {

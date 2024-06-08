@@ -1,11 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-interface Movie {
-  id: number;
-  title: string;
-}
-
+import { MoviesCard } from '../../types/movieCard'
 interface MoviesState {
-  data: Movie[];
+  data: MoviesCard[];
   loading: boolean;
   error: string | null;
 }
@@ -24,7 +20,7 @@ const moviesSlice = createSlice({
       state.loading = true;
       state.error = null;
     },
-    fetchDataSuccess(state, action: PayloadAction<Movie[]>) {
+    fetchDataSuccess(state, action: PayloadAction<MoviesCard[]>) {
       state.loading = false;
       state.data = action.payload;
     },

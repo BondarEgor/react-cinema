@@ -11,8 +11,10 @@
 .card-media {
 	height: 100%;
 	width: 100%;
-	object-fit: cover;
 	filter: brightness(80%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .card-content {
@@ -21,4 +23,12 @@
 	width: 100%;
 	color: white;
 	padding: 16px;
+}
+
+.link {
+	padding: 4px 8px;
+	background-color: white;
+	color: black;
+	font-size: 16px;
+	border-radius: 10px;
 }
