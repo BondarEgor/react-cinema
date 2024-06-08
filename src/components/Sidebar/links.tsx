@@ -1,7 +1,6 @@
 import {
 	BookmarkBorder,
 	Home,
-	Logout,
 	PersonOutlineOutlined,
 	Search,
 	Settings,

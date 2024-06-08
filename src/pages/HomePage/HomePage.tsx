@@ -10,7 +10,7 @@ import { filterButtons } from './filterButtons';
 import MovieCard from '../../components/MovieCardBig/MovieCardBig';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup'
 import MovieCardSmall from '../../components/MovieCardSmall/MovieCardSmall'
-// import CustomCarousel from '../../components/Carousel/Carousel'
+import CustomCarousel from '../../components/Carousel/Carousel'
 
 const movie = {
   title: 'Inception',
@@ -37,7 +37,7 @@ export default function HomePage() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className='flex flex-col'>
       <h1 className="text-3xl font-extrabold">My cinema</h1>
       <div className="mt-3">
 				<ButtonGroup buttons={filterButtons} />
@@ -47,7 +47,10 @@ export default function HomePage() {
         </div>
       </div>
       <h2 className='text-3xl font-extrabold mt-5'>Special for you</h2>
-      {/* <CustomCarousel /> */}
+      <div className='flex-grow-1 w-screen'>
+      <CustomCarousel />
+      </div>
     </div>
+    
   )
 }
