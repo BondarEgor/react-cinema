@@ -6,9 +6,12 @@ function App() {
 		<Router>
 			<div className='flex w-screen h-screen'>
 				<Sidebar></Sidebar>
-				<div className='mx-10 mt-8 flex-1 max-w-[calc(100vw-var(--sidebar-size))]'>
+				<main
+					className='mt-8 px-8 w-full max-h-screen flex flex-col'
+					style={{ maxWidth: 'calc(100% - var(--sidebar-size))' }}
+				>
 					<Routings />
-				</div>
+				</main>
 			</div>
 		</Router>
 	)

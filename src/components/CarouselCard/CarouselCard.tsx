@@ -1,10 +1,11 @@
-import { Card, CardContent, CardMedia, Typography } from '@mui/material'
-import { CardCover } from '@mui/joy'
-import React from 'react'
+import { Box, Card, CardMedia, SvgIcon, Typography } from '@mui/material'
+import { useAppSelector } from '../../hooks/hooks'
+import StarIcon from '@mui/icons-material/Star'
 
 export default function CarouselCard() {
+	const { data, loading } = useAppSelector(state => state.movies)
 	return (
-		<div className='mt-2'>
+		<>
 			<Card sx={{ maxWidth: 310, minHeight: 80 }}>
 				<CardMedia>
 					<img
@@ -14,7 +15,15 @@ export default function CarouselCard() {
 					/>
 				</CardMedia>
 			</Card>
-			<Typography>Here is some text</Typography>
-		</div>
+			<Box sx={{ display: 'flex', alignItems: 'center', justifyContent:'space-between', marginTop:1,paddingRight:2, justifyItems:'end' }}>
+				<Typography fontWeight={300}>{data[0].Title}</Typography>
+				<Typography variant='body2' fontWeight={300}>
+					2019
+				</Typography>
+				<SvgIcon>
+					<StarIcon color='warning'/>
+				</SvgIcon>
+			</Box>
+		</>
 	)
 }

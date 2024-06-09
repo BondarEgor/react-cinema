@@ -11,14 +11,9 @@ import { MoviesCardProps } from '../../types/movieCard'
 import './MovieCardBig.css'
 import { Link } from 'react-router-dom'
 import { CardCover } from '@mui/joy'
-import { styled } from '@mui/system'
+import HoverCard from '../HoverCard/HoverCard'
 
-const HoverCard = styled(Card)({
-	transition: 'transform 1s',
-	'&:hover': {
-		transform: 'scale(1.02)',
-	},
-})
+
 
 export default function MovieCard({ movie }: MoviesCardProps) {
 	return (
