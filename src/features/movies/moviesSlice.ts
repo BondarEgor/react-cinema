@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Movie } from '../../types/movieCard'
+import { Movie } from '../../types/movieCard';
 
 interface MoviesState {
   data: Movie[];
@@ -7,7 +7,7 @@ interface MoviesState {
   error: string | null;
 }
 
-const initialState: MoviesState = { 
+const initialState: MoviesState = {
   data: [],
   loading: true,
   error: null,
@@ -32,7 +32,7 @@ const moviesSlice = createSlice({
   },
 });
 
-export const { fetchMovies, fetchDataSuccess, fetchDataError } = moviesSlice.actions;
-
+export const { fetchMovies, fetchDataSuccess, fetchDataError } =
+  moviesSlice.actions;
 
 export default moviesSlice.reducer;

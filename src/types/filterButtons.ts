@@ -1,8 +1,8 @@
 export interface FilteredButtons {
-	buttons: Props[]
+  buttons: Props[];
 }
 
 export interface Props {
-	id: number
-	value: string
+  id: number;
+  value: string;
 }

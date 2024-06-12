@@ -3,17 +3,16 @@
 @tailwind utilities;
 
 body {
-	background-color: #1E2024;
-	color: white;
-	overflow: hidden;
+  background-color: #1e2024;
+  color: white;
+  overflow: hidden;
 }
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 :root {
-	--sidebar-size: 72px
+  --sidebar-size: 72px;
 }

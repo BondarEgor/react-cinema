@@ -1,3 +1,3 @@
-export interface LoaderProps{
-	loading: boolean
+export interface LoaderProps {
+  loading: boolean;
 }

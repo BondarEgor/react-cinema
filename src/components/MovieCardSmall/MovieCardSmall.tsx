@@ -7,13 +7,9 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function MovieCardSmall() {
   return (
-    <Card sx={{ maxWidth: 310, borderRadius:4 }}>
+    <Card sx={{ maxWidth: 310, borderRadius: 4 }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          alt="green iguana"
-        />
+        <CardMedia component="img" height="140" alt="green iguana" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Lizard
