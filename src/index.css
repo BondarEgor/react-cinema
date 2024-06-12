@@ -5,7 +5,7 @@
 body {
 	background-color: #1E2024;
 	color: white;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 * {
 	margin: 0;

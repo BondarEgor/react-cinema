@@ -1,29 +1,54 @@
 import { Box, Card, CardMedia, SvgIcon, Typography } from '@mui/material'
-import { useAppSelector } from '../../hooks/hooks'
 import StarIcon from '@mui/icons-material/Star'
+import { Link } from 'react-router-dom'
+import { Movie} from '../../types/movieCard'
 
-export default function CarouselCard() {
-	const { data, loading } = useAppSelector(state => state.movies)
+interface CarouseCard {
+movie: Movie
+}
+
+export default function CarouselCard({
+movie
+}: CarouseCard) {
 	return (
 		<>
-			<Card sx={{ maxWidth: 310, minHeight: 80 }}>
-				<CardMedia>
-					<img
-						src='https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60'
-						loading='lazy'
-						alt='example'
-					/>
-				</CardMedia>
-			</Card>
-			<Box sx={{ display: 'flex', alignItems: 'center', justifyContent:'space-between', marginTop:1,paddingRight:2, justifyItems:'end' }}>
-				<Typography fontWeight={300}>{data[0].Title}</Typography>
-				<Typography variant='body2' fontWeight={300}>
-					2019
-				</Typography>
-				<SvgIcon>
-					<StarIcon color='warning'/>
-				</SvgIcon>
-			</Box>
+			<Link to=''>
+				<Card sx={{ maxWidth: 310, maxHeight: 200 }}>
+					<CardMedia>
+						<img
+						key={movie.id}
+							src={movie.poster?.url}
+							loading='lazy'
+							alt='example'
+							style={{ objectFit: 'cover', height: '100%', width: '100%' }}
+						/>
+					</CardMedia>
+				</Card>
+				<Box
+					sx={{
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'space-between',
+						marginTop: 1,
+						paddingRight: 2,
+						justifyItems: 'end',
+					}}
+				>
+					<div>
+					<Typography fontWeight={500}>{movie.name}</Typography>
+					</div>
+
+					<div className='flex items-center gap-5'>
+					<Typography variant='body2' fontWeight={300}>
+						{movie.year}
+					</Typography>
+					<SvgIcon>
+						<StarIcon color='warning' />
+					</SvgIcon>
+					<Typography fontWeight={300}>{movie.rating.imdb}</Typography>
+					</div>
+				</Box>
+			</Link>
 		</>
 	)
 }

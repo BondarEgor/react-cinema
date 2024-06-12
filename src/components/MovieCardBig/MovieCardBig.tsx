@@ -1,44 +1,42 @@
 import React from 'react'
 import {
-	Card,
 	CardContent,
 	Typography,
 	Box,
 	StyledEngineProvider,
-	Button,
 } from '@mui/material'
-import { MoviesCardProps } from '../../types/movieCard'
+import { Movie } from '../../types/movieCard'
 import './MovieCardBig.css'
 import { Link } from 'react-router-dom'
 import { CardCover } from '@mui/joy'
 import HoverCard from '../HoverCard/HoverCard'
 
+interface CardBig {
+	movie: Movie
+}
 
-
-export default function MovieCard({ movie }: MoviesCardProps) {
+export default function MovieCard({ movie }: CardBig) {
+	const {name,poster,rating,year} = movie
+	
 	return (
 		<StyledEngineProvider injectFirst>
 			<HoverCard className='card'>
-				<Link to={movie.Link} target='_blank' rel='noreferrer'>
+				<Link to='#' target='_blank' rel='noreferrer'>
 					<CardCover>
-						<img
-							src='https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800'
-							loading='lazy'
-						/>
+						<img src={poster.url} loading='lazy' className='object-cover' />
 					</CardCover>
 					<CardContent className='card-content'>
 						<Typography variant='h5' component='div'>
-							{movie.Title}
+							{name}
 						</Typography>
 						<Typography variant='body2' color='white'>
-							Rating: {movie.Rating}
+							Rating: {rating.imdb}
 						</Typography>
 						<Box mt={1}>
 							<Typography variant='body2' color='white'>
-								Position: {movie.Position}
+								Year: {year}
 							</Typography>
-							<Typography variant='body2' color='white'>
-							</Typography>
+							<Typography variant='body2' color='white'></Typography>
 						</Box>
 					</CardContent>
 				</Link>

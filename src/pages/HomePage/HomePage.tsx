@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import getTopMovies from './topMovies'
 import {
 	fetchDataError,
@@ -16,17 +16,23 @@ import Loader from '../../components/Loader/Loader'
 
 export default function HomePage() {
 	const dispatch = useAppDispatch()
-	const { data, loading } = useAppSelector(state => state.movies)
+	const { data, loading, error } = useAppSelector(state => state.movies)
+	const [randomNumber, setRandomNumber] = useState(0)
 
 	useEffect(() => {
 		dispatch(fetchMovies())
 		getTopMovies()
 			.then(response => {
 				dispatch(fetchDataSuccess(response))
+				setRandomNumber(Math.floor(Math.random() * response.length))
 			})
 			.catch(error => dispatch(fetchDataError(error.message)))
 	}, [dispatch])
 
+	if (error) {
+		return <div>Error</div>
+	}
+	
 	return (
 		<>
 			{loading ? (
@@ -38,7 +44,7 @@ export default function HomePage() {
 					</Typography>
 					<ButtonGroup buttons={filterButtons} />
 					<div className='flex gap-8 mt-5 xs:flex-col'>
-						<MovieCard movie={data[1]} />
+						<MovieCard movie={data[randomNumber]} />
 						<MovieCardSmall />
 					</div>
 					<div className='mt-3'>

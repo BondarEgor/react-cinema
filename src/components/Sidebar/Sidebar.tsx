@@ -28,13 +28,13 @@ export default function Sidebar() {
 						))}
 					</ul>
 					<div className='logout'>
-							<SidebarLink
-								isActive={active === '/auth'}
-								onClick={() => setActive('/auth')}
-								icon={<Logout />}
-								href='auth'
-							/>
-						</div>
+						<SidebarLink
+							isActive={active === '/auth'}
+							onClick={() => setActive('/auth')}
+							icon={<Logout />}
+							href='auth'
+						/>
+					</div>
 				</div>
 			</aside>
 		</>
