@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   CardContent,
   Typography,
@@ -17,13 +16,12 @@ interface CardBig {
 
 export default function MovieCard({ movie }: CardBig) {
   const { name, poster, rating, year } = movie;
-
   return (
     <StyledEngineProvider injectFirst>
       <HoverCard className="card">
         <Link to="#" target="_blank" rel="noreferrer">
           <CardCover>
-            <img src={poster.url} loading="lazy" className="object-cover" />
+            <img src={poster.url || ''} className="object-cover" />
           </CardCover>
           <CardContent className="card-content">
             <Typography variant="h5" component="div">

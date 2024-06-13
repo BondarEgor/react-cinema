@@ -16,7 +16,8 @@ interface Response {
 }
 
 export default async function getTopMovies() {
-  const url = `${$API_BASE_URL}?${params}`;
+  const queryString = qs.stringify(params);
+  const url = `${$API_BASE_URL}?${queryString}`;
   const result = await fetch(url, {
     method: 'GET',
     headers: {
