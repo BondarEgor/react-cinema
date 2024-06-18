@@ -6,6 +6,11 @@
   flex-grow: 2;
   height: 300px;
   gap: 32px;
+  
+}
+.card :hover {
+  transition: all 0.3s ease;
+  transform: scale(1.05);
 }
 
 .card-media {

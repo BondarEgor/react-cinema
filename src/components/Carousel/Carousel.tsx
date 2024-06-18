@@ -1,9 +1,9 @@
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import { useAppSelector } from '../../hooks';
 import CarouselCard from '../CarouselCard/CarouselCard';
 import { responsive } from './responsive';
-import { useAppSelector } from '../../hooks/hooks';
 
 export default function CustomCarousel() {
   const { data } = useAppSelector((state) => state.movies);

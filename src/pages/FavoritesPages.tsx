@@ -1,26 +1,26 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../hooks/hooks';
+import { useEffect } from "react"
 import {
   fetchSeries,
   fetchSeriesError,
   fetchSeriesSuccess,
-} from '../features/series/seriesSlice';
-import getTopSeries from './HomePage/topSeries';
+} from "../features/series/seriesSlice"
+import { useAppDispatch, useAppSelector } from "../hooks"
+import { getTopMedia } from '../services/api.services'
 
 export default function FavoritesPage() {
-  const dispatch = useAppDispatch();
-  const { data, loading, error } = useAppSelector((state) => state.series);
+  const dispatch = useAppDispatch()
+  const { data, loading, error } = useAppSelector((state) => state.series)
 
   useEffect(() => {
-    dispatch(fetchSeries());
-    getTopSeries()
+    dispatch(fetchSeries())
+    getTopMedia("series")
       .then((response) => {
-        dispatch(fetchSeriesSuccess(response));
+        dispatch(fetchSeriesSuccess(response))
       })
       .catch((error) => {
-        dispatch(fetchSeriesError(error));
-      });
-  }, [dispatch]);
+        dispatch(fetchSeriesError(error))
+      })
+  }, [dispatch])
 
   return (
     <>
@@ -35,5 +35,5 @@ export default function FavoritesPage() {
         </ul>
       )}
     </>
-  );
+  )
 }

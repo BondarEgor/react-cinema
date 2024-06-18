@@ -1,18 +1,18 @@
+import { Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
-import getTopMovies from './topMovies';
+import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
+import CustomCarousel from '../../components/Carousel/Carousel';
+import Loader from '../../components/Loader/Loader';
+import MovieCard from '../../components/MovieCardBig/MovieCardBig';
+import MovieCardSmall from '../../components/MovieCardSmall/MovieCardSmall';
 import {
   fetchDataError,
   fetchDataSuccess,
   fetchMovies,
 } from '../../features/movies/moviesSlice';
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
-import { filterButtons } from './filterButtons';
-import MovieCard from '../../components/MovieCardBig/MovieCardBig';
-import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
-import MovieCardSmall from '../../components/MovieCardSmall/MovieCardSmall';
-import CustomCarousel from '../../components/Carousel/Carousel';
-import { Typography } from '@mui/material';
-import Loader from '../../components/Loader/Loader';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { getTopMovies} from '../../services/api.services';
+import { filterButtons } from './constants';
 
 export default function HomePage() {
   const dispatch = useAppDispatch();
@@ -22,7 +22,7 @@ export default function HomePage() {
   useEffect(() => {
     dispatch(fetchMovies());
     getTopMovies()
-      .then((response) => {
+      .then((response: any) => {
         dispatch(fetchDataSuccess(response));
         setRandomNumber(Math.floor(Math.random() * response.length));
       })

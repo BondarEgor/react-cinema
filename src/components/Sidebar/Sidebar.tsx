@@ -6,12 +6,14 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export default function Sidebar() {
+  
   const location = useLocation();
   const [active, setActive] = useState('');
 
-  useEffect(() => {
-    setActive(location.pathname);
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   setActive(location.pathname);
+  // }, []);
+  
   return (
     <>
       <aside className="sidebar h-screen">
@@ -20,10 +22,10 @@ export default function Sidebar() {
             {links.map((link, index) => (
               <SidebarLink
                 isActive={active === `/${link.href}`}
-                onClick={() => setActive(link.href)}
+                onClick={() => setActive(`/${link.href}`)}
                 key={index}
                 icon={link.icon}
-                href={link.href}
+                href={`/${link.href}`}
               />
             ))}
           </ul>
@@ -32,7 +34,7 @@ export default function Sidebar() {
               isActive={active === '/auth'}
               onClick={() => setActive('/auth')}
               icon={<Logout />}
-              href="auth"
+              href="/auth"
             />
           </div>
         </div>

@@ -8,7 +8,6 @@ import { Movie } from '../../types/movieCard';
 import './MovieCardBig.css';
 import { Link } from 'react-router-dom';
 import { CardCover } from '@mui/joy';
-import HoverCard from '../HoverCard/HoverCard';
 
 interface CardBig {
   movie: Movie;
@@ -18,17 +17,13 @@ export default function MovieCard({ movie }: CardBig) {
   const { name, poster, rating, year } = movie;
   return (
     <StyledEngineProvider injectFirst>
-      <HoverCard className="card">
-        <Link to="#" target="_blank" rel="noreferrer">
-          <CardCover>
-            <img src={poster.url || ''} className="object-cover" />
-          </CardCover>
+        <Link to="#" target="self" rel="noreferrer">
           <CardContent className="card-content">
             <Typography variant="h5" component="div">
               {name}
             </Typography>
             <Typography variant="body2" color="white">
-              Rating: {rating.imdb}
+              Rating: {}
             </Typography>
             <Box mt={1}>
               <Typography variant="body2" color="white">
@@ -38,7 +33,6 @@ export default function MovieCard({ movie }: CardBig) {
             </Box>
           </CardContent>
         </Link>
-      </HoverCard>
     </StyledEngineProvider>
   );
 }

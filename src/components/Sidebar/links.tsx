@@ -9,7 +9,7 @@ import {
 export const links = [
   { href: 'home', icon: <Home /> },
   { href: 'profile', icon: <PersonOutlineOutlined />, label: 'Profile' },
-  { href: 'settings', icon: <Settings /> },
   { href: 'favorites', icon: <BookmarkBorder /> },
   { href: 'search', icon: <Search /> },
+  { href: 'settings', icon: <Settings /> },
 ];
