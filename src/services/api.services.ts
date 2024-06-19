@@ -14,4 +14,4 @@ async function getTopMovies() {
   return getTopMedia("movies");
 }
 
-export { getTopMedia, getTopSeries, getTopMovies };
+export { getTopSeries, getTopMovies };

@@ -5,7 +5,7 @@ import {
   fetchSeriesSuccess,
 } from "../features/series/seriesSlice"
 import { useAppDispatch, useAppSelector } from "../hooks"
-import { getTopMedia } from '../services/api.services'
+import { getTopSeries } from '../services/api.services'
 
 export default function FavoritesPage() {
   const dispatch = useAppDispatch()
@@ -13,7 +13,7 @@ export default function FavoritesPage() {
 
   useEffect(() => {
     dispatch(fetchSeries())
-    getTopMedia("series")
+    getTopSeries()
       .then((response) => {
         dispatch(fetchSeriesSuccess(response))
       })
