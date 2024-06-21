@@ -1,19 +1,29 @@
-import { Logout } from '@mui/icons-material';
-import SidebarLink from '../SidebarLink/SidebarLink';
-import './Sidebar.css';
-import { links } from './links';
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Login, Logout } from "@mui/icons-material";
+import SidebarLink from "../SidebarLink/SidebarLink";
+import "./Sidebar.css";
+import { links } from "./links";
+import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
-  
   const location = useLocation();
-  const [active, setActive] = useState('');
+  const navigate = useNavigate();
+  const [active, setActive] = useState("");
+  const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem("token"));
 
-  // useEffect(() => {
-  //   setActive(location.pathname);
-  // }, []);
-  
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
+
+  function handleAuthClick() {
+    if (loggedIn) {
+      localStorage.removeItem("token");
+      setLoggedIn(false);
+    } else {
+      navigate("/auth");
+    }
+  }
+
   return (
     <>
       <aside className="sidebar h-screen">
@@ -31,10 +41,10 @@ export default function Sidebar() {
           </ul>
           <div className="logout">
             <SidebarLink
-              isActive={active === '/auth'}
-              onClick={() => setActive('/auth')}
-              icon={<Logout />}
-              href="/auth"
+              isActive={active === "/auth"}
+              onClick={handleAuthClick}
+              icon={loggedIn ? <Logout /> : <Login />}
+              href={loggedIn ? "#" : "/auth"}
             />
           </div>
         </div>
