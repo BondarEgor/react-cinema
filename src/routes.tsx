@@ -3,7 +3,7 @@ import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage";
 import FavoritesPage from "./pages/FavoritesPages";
 import SearchPage from "./pages/SearchPage";
-import AuthPage from "./pages/AuthPage/AuthPage";
+import AuthPage from './pages/AuthPage';
 import NotFoundPage from "./pages/NotFoundPage";
 import ErrorPage from "./pages/ErrorPage";
 import { Navigate, RouteObject, useRoutes } from "react-router-dom";
