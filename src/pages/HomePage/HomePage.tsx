@@ -1,36 +1,42 @@
-import { Typography } from '@mui/material';
-import { useEffect, useState } from 'react';
-import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
-import CustomCarousel from '../../components/Carousel/Carousel';
-import Loader from '../../components/Loader/Loader';
-import MovieCard from '../../components/MovieCardBig/MovieCardBig';
-import MovieCardSmall from '../../components/MovieCardSmall/MovieCardSmall';
+import { Typography } from "@mui/material";
+import { useEffect } from "react";
+import ButtonGroup from "../../components/ButtonGroup/ButtonGroup";
+import CustomCarousel from "../../components/Carousel/Carousel";
+import Loader from "../../components/Loader/Loader";
+import MovieCard from "../../components/MovieCardBig/MovieCardBig";
+import MovieCardSmall from "../../components/MovieCardSmall/MovieCardSmall";
 import {
   fetchDataError,
   fetchDataSuccess,
   fetchMovies,
-} from '../../features/movies/moviesSlice';
-import { useAppDispatch, useAppSelector } from '../../hooks';
-import { getTopMovies} from '../../services/api.services';
-import { filterButtons } from './constants';
+} from "../../features/movies/moviesSlice";
+import { useAppDispatch, useAppSelector } from "../../hooks";
+import { getTopMovies } from "../../services/api.services";
+import { filterButtons } from "./constants";
+import ErrorPage from "../ErrorPage";
 
 export default function HomePage() {
   const dispatch = useAppDispatch();
   const { data, loading, error } = useAppSelector((state) => state.movies);
-  const [randomNumber, setRandomNumber] = useState(0);
 
   useEffect(() => {
-    dispatch(fetchMovies());
-    getTopMovies()
-      .then((response: any) => {
-        dispatch(fetchDataSuccess(response));
-        setRandomNumber(Math.floor(Math.random() * response.length));
-      })
-      .catch((error) => dispatch(fetchDataError(error.message)));
+    const fetchData = async () => {
+
+      if (!data || data.length <= 0) {
+        try {
+          dispatch(fetchMovies());
+          const response = await getTopMovies();
+          dispatch(fetchDataSuccess(response));
+        } catch (error) {
+          dispatch(fetchDataError(`${error}`));
+        }
+      }
+    };
+    fetchData();
   }, [dispatch]);
 
   if (error) {
-    return <div>Error</div>;
+    return <ErrorPage />;
   }
 
   return (
@@ -44,7 +50,7 @@ export default function HomePage() {
           </Typography>
           <ButtonGroup buttons={filterButtons} />
           <div className="flex gap-8 mt-5 xs:flex-col">
-            <MovieCard movie={data[randomNumber]} />
+            <MovieCard movie={data[0]} />
             <MovieCardSmall />
           </div>
           <div className="mt-3">

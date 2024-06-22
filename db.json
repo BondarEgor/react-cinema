@@ -9,7 +9,7 @@
       "year": 2024,
       "imdb": 5.1,
       "movieLength": 80,
-      "genre": "drama",
+      "genre": "Horror",
       "poster": "https://image.openmoviedb.com/kinopoisk-images/10703959/7af798b4-5550-4c99-98fc-1dae108bc454/orig"
     },
     {
@@ -18,7 +18,7 @@
       "year": 2010,
       "imdb": 8.8,
       "movieLength": 148,
-      "genre": "sci-fi",
+      "genre": "Fantasy",
       "poster": "https://image.openmoviedb.com/inception/poster.jpg"
     },
     {
@@ -27,7 +27,7 @@
       "year": 2014,
       "imdb": 8.6,
       "movieLength": 169,
-      "genre": "sci-fi",
+      "genre": "Fantasy",
       "poster": "https://image.openmoviedb.com/interstellar/poster.jpg"
     },
     {
@@ -36,7 +36,7 @@
       "year": 2008,
       "imdb": 9.0,
       "movieLength": 152,
-      "genre": "action",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/thedarkknight/poster.jpg"
     },
     {
@@ -45,7 +45,7 @@
       "year": 1994,
       "imdb": 8.9,
       "movieLength": 154,
-      "genre": "crime",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/pulpfiction/poster.jpg"
     },
     {
@@ -54,7 +54,7 @@
       "year": 1999,
       "imdb": 8.8,
       "movieLength": 139,
-      "genre": "drama",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/fightclub/poster.jpg"
     },
     {
@@ -63,7 +63,7 @@
       "year": 1994,
       "imdb": 8.8,
       "movieLength": 142,
-      "genre": "drama",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/forrestgump/poster.jpg"
     },
     {
@@ -72,7 +72,7 @@
       "year": 1999,
       "imdb": 8.7,
       "movieLength": 136,
-      "genre": "sci-fi",
+      "genre": "Fantasy",
       "poster": "https://image.openmoviedb.com/thematrix/poster.jpg"
     },
     {
@@ -81,7 +81,7 @@
       "year": 1990,
       "imdb": 8.7,
       "movieLength": 146,
-      "genre": "crime",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/goodfellas/poster.jpg"
     },
     {
@@ -90,7 +90,7 @@
       "year": 1994,
       "imdb": 9.3,
       "movieLength": 142,
-      "genre": "drama",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/shawshank/poster.jpg"
     }
   ],
@@ -101,7 +101,7 @@
       "year": 2008,
       "imdb": 9.5,
       "seasons": 5,
-      "genre": "crime",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/breakingbad/poster.jpg"
     },
     {
@@ -110,7 +110,7 @@
       "year": 2011,
       "imdb": 9.3,
       "seasons": 8,
-      "genre": "fantasy",
+      "genre": "Fantasy",
       "poster": "https://image.openmoviedb.com/gameofthrones/poster.jpg"
     },
     {
@@ -119,7 +119,7 @@
       "year": 2016,
       "imdb": 8.7,
       "seasons": 4,
-      "genre": "sci-fi",
+      "genre": "Fantasy",
       "poster": "https://image.openmoviedb.com/strangerthings/poster.jpg"
     },
     {
@@ -128,7 +128,7 @@
       "year": 2019,
       "imdb": 8.2,
       "seasons": 2,
-      "genre": "fantasy",
+      "genre": "Fantasy",
       "poster": "https://image.openmoviedb.com/thewitcher/poster.jpg"
     },
     {
@@ -137,7 +137,7 @@
       "year": 2019,
       "imdb": 8.8,
       "seasons": 2,
-      "genre": "sci-fi",
+      "genre": "Fantasy",
       "poster": "https://image.openmoviedb.com/themandalorian/poster.jpg"
     },
     {
@@ -146,7 +146,7 @@
       "year": 1994,
       "imdb": 8.9,
       "seasons": 10,
-      "genre": "comedy",
+      "genre": "Comedy",
       "poster": "https://image.openmoviedb.com/friends/poster.jpg"
     },
     {
@@ -155,7 +155,7 @@
       "year": 2010,
       "imdb": 9.1,
       "seasons": 4,
-      "genre": "crime",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/sherlock/poster.jpg"
     },
     {
@@ -164,7 +164,7 @@
       "year": 2016,
       "imdb": 8.7,
       "seasons": 4,
-      "genre": "drama",
+      "genre": "Drama",
       "poster": "https://image.openmoviedb.com/thecrown/poster.jpg"
     },
     {
@@ -173,7 +173,7 @@
       "year": 2011,
       "imdb": 8.8,
       "seasons": 5,
-      "genre": "sci-fi",
+      "genre": "Fantasy",
       "poster": "https://image.openmoviedb.com/blackmirror/poster.jpg"
     },
     {
@@ -182,7 +182,7 @@
       "year": 2005,
       "imdb": 8.9,
       "seasons": 9,
-      "genre": "comedy",
+      "genre": "Comedy",
       "poster": "https://image.openmoviedb.com/theoffice/poster.jpg"
     }
   ]

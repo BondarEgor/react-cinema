@@ -10,6 +10,7 @@ export default function FormInput({
   return (
     <>
       <Input
+        type={name === 'password' ? 'password': 'text'}
         placeholder={placeholder}
         className={className}
         {...register(name, { required: true })}

@@ -4,7 +4,7 @@ import SettingsPage from "./pages/SettingsPage";
 import FavoritesPage from "./pages/FavoritesPages";
 import SearchPage from "./pages/SearchPage";
 import AuthPage from './pages/AuthPage';
-import NotFoundPage from "./pages/NotFoundPage";
+import NotFoundPage from "./pages/NotFoundPage/Index";
 import ErrorPage from "./pages/ErrorPage";
 import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 import Layout from "./Layout";
