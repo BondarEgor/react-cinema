@@ -35,6 +35,9 @@ export default function HomePage() {
     fetchData();
   }, [dispatch]);
 
+  //добавить эффект на активный роут
+  //
+
   if (error) {
     return <ErrorPage />;
   }

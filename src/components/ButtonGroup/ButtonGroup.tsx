@@ -2,7 +2,7 @@ import { StyledEngineProvider, Button } from "@mui/material";
 import { useState } from "react";
 import { FilteredButtons } from "../../types/filterButtons";
 import "./ButtonGroup.css";
-import { getMoviesByQuery, getTopMovies } from "../../services/api.services";
+import { getMoviesByQuery } from "../../services/api.services";
 
 export default function ButtonGroup({ buttons }: FilteredButtons) {
   const [activeButton, setActiveButton] = useState<number | null>(1);
