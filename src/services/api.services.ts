@@ -1,10 +1,17 @@
-async function getTopMedia(type: "movies" | "series") {
-  const url = `${process.env.REACT_APP_API_BASE_URL}/${type}`;
+async function getTopMedia(type: "movies" | "series",query?: string) {
+  try {
+    let url = `${process.env.REACT_APP_API_BASE_URL}/${type}`;
+    if(query){
+      url += `?genre_like=${query}`
+    }
+    const response = await fetch(url);
+    const data = await response.json();
+  
+    return data;
+  } catch (error) {
+    return false
+  }
 
-  const response = await fetch(url);
-  const data = await response.json();
-
-  return data;
 }
 
 async function getTopSeries() {
@@ -14,4 +21,11 @@ async function getTopMovies() {
   return getTopMedia("movies");
 }
 
-export { getTopSeries, getTopMovies };
+async function getMoviesByQuery(query: string) {
+  return getTopMedia('movies',query)
+}
+
+async function getSeriesByQuery(query: string) {
+  return getTopMedia('series',query)
+}
+export { getTopSeries, getTopMovies,getMoviesByQuery, getSeriesByQuery };
