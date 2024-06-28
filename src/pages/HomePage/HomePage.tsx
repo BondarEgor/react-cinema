@@ -1,69 +1,48 @@
 import { Typography } from "@mui/material";
-import { useEffect } from "react";
 import ButtonGroup from "../../components/ButtonGroup/ButtonGroup";
 import CustomCarousel from "../../components/Carousel/Carousel";
 import Loader from "../../components/Loader/Loader";
 import MovieCard from "../../components/MovieCardBig/MovieCardBig";
 import MovieCardSmall from "../../components/MovieCardSmall/MovieCardSmall";
-import {
-  fetchDataError,
-  fetchDataSuccess,
-  fetchMovies,
-} from "../../features/movies/moviesSlice";
-import { useAppDispatch, useAppSelector } from "../../hooks";
 import { getTopMovies } from "../../services/api.services";
 import { filterButtons } from "./constants";
 import ErrorPage from "../ErrorPage";
+import { useQuery } from "react-query";
 
 export default function HomePage() {
-  const dispatch = useAppDispatch();
-  const { data, loading, error } = useAppSelector((state) => state.movies);
+  async function fetchData() {
+    return await getTopMovies();
+  }
+  const { data, isLoading, isError } = useQuery("movies", fetchData);
 
-  useEffect(() => {
-    const fetchData = async () => {
-
-      if (!data || data.length <= 0) {
-        try {
-          dispatch(fetchMovies());
-          const response = await getTopMovies();
-          dispatch(fetchDataSuccess(response));
-        } catch (error) {
-          dispatch(fetchDataError(`${error}`));
-        }
-      }
-    };
-    fetchData();
-  }, [dispatch]);
-
-  //добавить эффект на активный роут
-  //
-
-  if (error) {
+  if (isError) {
     return <ErrorPage />;
   }
 
+  if (isLoading) {
+    return <Loader loading={isLoading} />;
+  }
+
+  if (!data) {
+    return <h3>No data</h3>;
+  }
+
   return (
-    <>
-      {loading ? (
-        <Loader loading={loading} />
-      ) : (
-        <div className="lg:h-3/5">
-          <Typography sx={{ marginBottom: 1 }} variant="h4">
-            My cinema
-          </Typography>
-          <ButtonGroup buttons={filterButtons} />
-          <div className="flex gap-8 mt-5 xs:flex-col">
-            <MovieCard movie={data[0]} />
-            <MovieCardSmall />
-          </div>
-          <div className="mt-3">
-            <Typography marginBottom={1} fontWeight={500} variant="h5">
-              Special for you
-            </Typography>
-            <CustomCarousel />
-          </div>
-        </div>
-      )}
-    </>
+    <div className="lg:h-3/5">
+      <Typography sx={{ marginBottom: 1 }} variant="h4">
+        My cinema
+      </Typography>
+      <ButtonGroup buttons={filterButtons} />
+      <div className="flex gap-8 mt-5 xs:flex-col">
+        <MovieCard movie={data[1]} />
+        <MovieCardSmall />
+      </div>
+      <div className="mt-3">
+        <Typography marginBottom={1} fontWeight={500} variant="h5">
+          Special for you
+        </Typography>
+        <CustomCarousel />
+      </div>
+    </div>
   );
 }

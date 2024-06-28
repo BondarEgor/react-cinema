@@ -1,8 +1,8 @@
 export const filterButtons = [
-  {id: 1,value: 'All',},
-  {id: 2,value: 'Comedy',},
-  {id: 3,value: 'Fantasy',},
-  {id: 4,value: 'Drama',},
-  {id: 5,value: 'History',},
-  {id: 6,value: 'Horror',},
+  {id: 0,value: 'all',},
+  {id: 1,value: 'comedy',},
+  {id: 2,value: 'fantasy',},
+  {id: 3,value: 'drama',},
+  {id: 4,value: 'history',},
+  {id: 5,value: 'horror',},
 ];

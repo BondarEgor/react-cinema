@@ -3,7 +3,7 @@ import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage";
 import FavoritesPage from "./pages/FavoritesPages";
 import SearchPage from "./pages/SearchPage";
-import AuthPage from './pages/AuthPage';
+import AuthPage from "./pages/AuthPage";
 import NotFoundPage from "./pages/NotFoundPage/Index";
 import ErrorPage from "./pages/ErrorPage";
 import { Navigate, RouteObject, useRoutes } from "react-router-dom";
@@ -15,6 +15,10 @@ const routes: RouteObject[] = [
 
   {
     path: "/home",
+    element: <ProtectedRoute element={<Layout children={<HomePage />} />} />,
+  },
+  {
+    path: "/home/:genre",
     element: <ProtectedRoute element={<Layout children={<HomePage />} />} />,
   },
   {
