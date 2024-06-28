@@ -1,8 +1,10 @@
-export const filterButtons = [
-  {id: 1,value: 'All',},
-  {id: 2,value: 'Comedy',},
-  {id: 3,value: 'Fantasy',},
-  {id: 4,value: 'Drama',},
-  {id: 5,value: 'History',},
-  {id: 6,value: 'Horror',},
+import { FilteredButtons } from "../../types/filterButtons";
+
+export const filterButtons: FilteredButtons[] = [
+  { id: 0, label: "all", genre: "" },
+  { id: 1, label: "comedy", genre: "comedy" },
+  { id: 2, label: "fantasy", genre: "fantasy" },
+  { id: 3, label: "drama", genre: "drama" },
+  { id: 4, label: "history", genre: "history" },
+  { id: 5, label: "horror", genre: "horror" },
 ];
