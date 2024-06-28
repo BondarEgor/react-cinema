@@ -16,15 +16,11 @@ async function getTopMedia(type: "movies" | "series", query?: string) {
 async function getTopSeries() {
   return getTopMedia("series");
 }
-async function getTopMovies() {
-  return getTopMedia("movies");
-}
-
-async function getMoviesByQuery(query: string) {
-  return getTopMedia("movies", query);
+async function getTopMovies(genre?: string) {
+  return getTopMedia("movies", genre);
 }
 
 async function getSeriesByQuery(query: string) {
   return getTopMedia("series", query);
 }
-export { getTopSeries, getTopMovies, getMoviesByQuery, getSeriesByQuery };
+export { getTopSeries, getTopMovies, getSeriesByQuery };
