@@ -7,7 +7,7 @@ export default function NotFoundPage() {
     <>
       <div className="wrapper">
         <h1 className='not-found'>404 - Not Found!</h1>
-        <Link to="/home?genre=all">
+        <Link to="/home/all">
           <Button variant='contained'>Go Home</Button>
         </Link>
       </div>

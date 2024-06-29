@@ -5,6 +5,17 @@
 	flex-direction: column;
 	align-items: center;
 }
+.loginBtn {
+	background-color: #1876D2;
+	font-size: 18px;
+	text-align: center;
+	padding: 6px;
+	border-radius: 4px;
+}
+
+.loginBtn:hover{
+	opacity: 0.8;
+}
 
 .heading {
 	text-align: center;

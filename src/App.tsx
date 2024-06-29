@@ -1,10 +1,9 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import Sidebar from './components/Sidebar/Sidebar';
-import { Routings } from './routes';
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routings } from "./routes";
 function App() {
   return (
     <Router>
-          <Routings />
+      <Routings />
     </Router>
   );
 }

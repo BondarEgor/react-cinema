@@ -15,8 +15,9 @@ export default function HomePage() {
   const { genre } = useParams();
 
   const activeButton = filterButtons.findIndex(
-    (button) => button.label === genre
+    (button) => button.genre === genre
   );
+
 
   async function fetchData() {
     return await getTopMovies(genre ?? "");

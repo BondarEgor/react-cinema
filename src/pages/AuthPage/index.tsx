@@ -1,4 +1,4 @@
-import { Input, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { useForm, SubmitHandler, FormProvider } from "react-hook-form";
 import "./styles.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,27 +6,26 @@ import FormInput from "../../components/kit/FormInput";
 import { IFormInput } from "../../components/kit/FormInput";
 
 export default function AuthPage() {
-  const navigate = useNavigate();
   const methods = useForm<IFormInput>();
-
+  const navigate = useNavigate()
   const saveToStorage = (key: string, value: string) => {
     return localStorage.setItem(key, value);
   };
-  const handleReset = () => {
-    methods.reset();
-  };
+
   const submitCallback: SubmitHandler<IFormInput> = async () => {
     const url = process.env.REACT_APP_API_BASE_URL;
     const fetchData = await fetch(`${url}/login`);
     const response = await fetchData.json();
     saveToStorage("token", response.token);
-    navigate("/home?genre=all");
+    navigate('/home/all')
   };
 
   return (
     <div className="wrapper">
       <FormProvider {...methods}>
-        <form className="form" onSubmit={methods.handleSubmit(submitCallback)}>
+        <form className="form"
+        onSubmit={methods.handleSubmit(submitCallback)}
+        >
           <Typography className="heading">Welcome back</Typography>
 
           <Typography className="info-string">
@@ -50,17 +49,10 @@ export default function AuthPage() {
             isRequired={true}
           />
 
-          <Button variant="contained" className="loginBtn" type="submit">
+          <Button type="submit" variant="contained">
             Log in
           </Button>
-          <Button
-            onClick={handleReset}
-            variant="outlined"
-            className="loginBtn"
-            type="submit"
-          >
-            Clear
-          </Button>
+          <Button type="reset">Clear</Button>
         </form>
       </FormProvider>
     </div>
