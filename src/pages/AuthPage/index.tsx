@@ -20,7 +20,7 @@ export default function AuthPage() {
     const fetchData = await fetch(`${url}/login`);
     const response = await fetchData.json();
     saveToStorage("token", response.token);
-    navigate("/home");
+    navigate("/home?genre=all");
   };
 
   return (

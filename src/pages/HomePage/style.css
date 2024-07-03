@@ -1,0 +1,32 @@
+.button-group {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.custom-button {
+	text-transform: capitalize;
+	font-size: 16px;
+	font-weight: normal;
+	border-radius: 50px;
+	color: white;
+	background-color: #292b30;
+	transition: background-color 0.3s;
+	flex-grow: 1;
+	display: block;
+	padding: 10px;
+	text-align: center;
+
+}
+
+.custom-button:hover {
+	background-color: #292b30;
+}
+
+.active-button {
+	background-color: #f37516;
+}
+
+.active-button:hover {
+	background-color: #f37516;
+}
