@@ -1,12 +1,14 @@
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
-import { useAppSelector } from '../../hooks';
-import CarouselCard from '../CarouselCard/CarouselCard';
-import { responsive } from './responsive';
-
-export default function CustomCarousel() {
-  const { data } = useAppSelector((state) => state.movies);
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import CarouselCard from "../CarouselCard/CarouselCard";
+import { responsive } from "./responsive";
+import { Movie } from "../../types/movieCard";
+export interface CustomCarouselProps {
+  data: Movie[];
+}
+export default function CustomCarousel({ data }: CustomCarouselProps) {
+  console.log(data);
   const settings = {
     infinite: true,
     speed: 500,

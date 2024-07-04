@@ -3,12 +3,14 @@ import StarIcon from '@mui/icons-material/Star';
 import { Link } from 'react-router-dom';
 import { Movie } from '../../types/movieCard';
 import { useState } from 'react';
+import { flexbox } from '@mui/system'
 
 interface CarouseCard {
   movie: Movie;
 }
 
 export default function CarouselCard({ movie }: CarouseCard) {
+  console.log(movie.poster)
   return (
     <>
       <Link to="">
@@ -16,12 +18,10 @@ export default function CarouselCard({ movie }: CarouseCard) {
           <CardMedia>
             <img
               key={movie.id}
-              src={
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4fEPGlVki-9peWN6a6WRmAKdeNGkIcv03A&s'
-              }
+              src={movie.poster}
               loading="lazy"
               alt="example"
-              style={{ objectFit: 'cover', height: '100%', width: '100%' }}
+              style={{ objectFit: 'cover', width: '100%' }}
             />
           </CardMedia>
         </Card>
