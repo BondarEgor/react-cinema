@@ -27,8 +27,7 @@ export default function HomePage() {
     return articles;
   };
   const fetchMovies = async () => {
-    const url = "https://imdb-top-100-movies.p.rapidapi.com";
-    const response = await fetch(url, {
+    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}`, {
       headers: {
         "x-rapidapi-key": "7505d69b34msh4e599e0255c0608p150ca5jsn7817adc1cb01",
       },
@@ -36,6 +35,7 @@ export default function HomePage() {
     const data = await response.json();
     return data;
   };
+
   const {
     data: imdbMovies,
     isLoading: isImdbLoading,

@@ -1,6 +1,5 @@
 import { Box, Card, CardActionArea, SvgIcon, Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
-import { Movie } from "../../types/movieCard";
 import { CarouseCard } from "../../types/CarouselCard";
 
 export default function CarouselCard({ movie }: CarouseCard) {

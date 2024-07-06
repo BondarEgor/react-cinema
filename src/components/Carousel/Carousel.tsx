@@ -3,8 +3,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import CarouselCard from "../CarouselCard/CarouselCard";
 import { responsive } from "./responsive";
-import { Movie } from "../../types/movieCard";
 import { MoviesImdb100 } from '../../types/MoviesImdb100'
+
 export interface CustomCarouselProps {
   data: MoviesImdb100[];
 }
