@@ -11,14 +11,6 @@
   display: flex;
   flex: 2 1 auto;
   color: white;
-  padding: 16px;
-  border-radius: 20px;
-}
-
-.link {
-  padding: 4px 8px;
-  background-color: #292B30;
-  color: black;
-  font-size: 16px;
-  border-radius: 10px;
+  min-height: 250px;
+  border-radius: 14px;
 }

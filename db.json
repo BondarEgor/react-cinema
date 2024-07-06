@@ -14,6 +14,32 @@
     },
     {
       "id": 2,
+      "name": "Drakula",
+      "year": 2024,
+      "imdb": 5.1,
+      "movieLength": 80,
+      "genre": "Horror",
+      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 3,
+      "name": "Drakula",
+      "year": 2024,
+      "imdb": 5.1,
+      "movieLength": 80,
+      "genre": "Horror",
+      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    }, {
+      "id": 4,
+      "name": "Drakula",
+      "year": 2024,
+      "imdb": 5.1,
+      "movieLength": 80,
+      "genre": "Horror",
+      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 5,
       "name": "Inception",
       "year": 2010,
       "imdb": 8.8,
@@ -22,7 +48,7 @@
       "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
     },
     {
-      "id": 3,
+      "id": 6,
       "name": "Interstellar",
       "year": 2014,
       "imdb": 8.6,
@@ -31,7 +57,7 @@
       "poster": "https://img.goodfon.ru/original/1920x1200/e/c0/nachalo-inception-aktery-stoyat.jpg"
     },
     {
-      "id": 4,
+      "id": 7,
       "name": "The Dark Knight",
       "year": 2008,
       "imdb": 9,
@@ -40,7 +66,7 @@
       "poster": "https://i.artfile.me/wallpaper/16-10-2017/3488x2180/kino-filmy-baby-driver-baby-driver-1250016.jpg"
     },
     {
-      "id": 5,
+      "id": 8,
       "name": "Pulp Fiction",
       "year": 1994,
       "imdb": 8.9,
@@ -49,25 +75,25 @@
       "poster": "https://cdnb.artstation.com/p/assets/images/images/014/950/735/large/imaginative-hobbyist-birdsofpreyposter.jpg?1546451236"
     },
     {
-      "id": 6,
+      "id": 9,
       "name": "Fight Club",
       "year": 1999,
       "imdb": 8.8,
       "movieLength": 139,
-      "genre": "Drama",
+      "genre": "Comedy",
       "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
     },
     {
-      "id": 7,
+      "id": 10,
       "name": "Forrest Gump",
       "year": 1994,
       "imdb": 8.8,
       "movieLength": 142,
-      "genre": "Drama",
+      "genre": "History",
       "poster": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
     },
     {
-      "id": 8,
+      "id": 11,
       "name": "The Matrix",
       "year": 1999,
       "imdb": 8.7,
@@ -76,7 +102,7 @@
       "poster": "https://i.pinimg.com/originals/3a/2a/c0/3a2ac074bb4a4f6607d0cde8c0e796e9.jpg"
     },
     {
-      "id": 9,
+      "id": 12,
       "name": "Goodfellas",
       "year": 1990,
       "imdb": 8.7,
@@ -85,13 +111,40 @@
       "poster": "https://i.pinimg.com/originals/3a/53/1c/3a531c913e4b18e71b1676a0d2222105.jpg"
     },
     {
-      "id": 10,
-      "name": "The Shawshank Redemption",
+      "id": 13,
+      "name": "Shawshank",
       "year": 1994,
       "imdb": 9.3,
       "movieLength": 142,
-      "genre": "Drama",
+      "genre": "History",
       "poster": "https://i.pinimg.com/originals/71/a5/5c/71a55c7b431b94bd84ffb2ee310246e5.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Fight Club",
+      "year": 1999,
+      "imdb": 8.8,
+      "movieLength": 139,
+      "genre": "Comedy",
+      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 14,
+      "name": "Fight Club",
+      "year": 1999,
+      "imdb": 8.8,
+      "movieLength": 139,
+      "genre": "Comedy",
+      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 15,
+      "name": "Fight Club",
+      "year": 1999,
+      "imdb": 8.8,
+      "movieLength": 139,
+      "genre": "Comedy",
+      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
     }
   ],
   "series": [
@@ -119,7 +172,7 @@
       "year": 2016,
       "imdb": 8.7,
       "seasons": 4,
-      "genre": "Fantasy",
+      "genre": "history",
       "poster": "https://image.openmoviedb.com/strangerthings/poster.jpg"
     },
     {
@@ -128,7 +181,7 @@
       "year": 2019,
       "imdb": 8.2,
       "seasons": 2,
-      "genre": "Fantasy",
+      "genre": "history",
       "poster": "https://image.openmoviedb.com/thewitcher/poster.jpg"
     },
     {

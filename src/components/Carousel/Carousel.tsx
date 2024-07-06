@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick.css";
 import CarouselCard from "../CarouselCard/CarouselCard";
 import { responsive } from "./responsive";
 import { Movie } from "../../types/movieCard";
+import { MoviesImdb100 } from '../../types/MoviesImdb100'
 export interface CustomCarouselProps {
-  data: Movie[];
+  data: MoviesImdb100[];
 }
 export default function CustomCarousel({ data }: CustomCarouselProps) {
-  console.log(data);
   const settings = {
     infinite: true,
     speed: 500,
@@ -21,11 +21,7 @@ export default function CustomCarousel({ data }: CustomCarouselProps) {
   return (
     <Slider {...settings}>
       {data.map((item) => {
-        return (
-          <div key={item.id}>
-            <CarouselCard key={item.id} movie={item} />
-          </div>
-        );
+        return <CarouselCard key={item.rating} movie={item} />;
       })}
     </Slider>
   );

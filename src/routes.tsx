@@ -1,4 +1,4 @@
-import HomePage from './pages/HomePage/index';
+import HomePage from "./pages/HomePage/index";
 import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage";
 import FavoritesPage from "./pages/FavoritesPages";
@@ -11,15 +11,9 @@ import Layout from "./Layout";
 import ProtectedRoute from "./utils/ProtectedRoute";
 
 const routes: RouteObject[] = [
-  { path: "", element: <Navigate to="/home/all" replace /> },
-
+  { path: "", element: <Navigate to="/home" replace /> },
   {
     path: "/home",
-    element: <Navigate to="/home/all" replace />,
-  },
-
-  {
-    path: "/home/all",
     element: <ProtectedRoute element={<Layout children={<HomePage />} />} />,
   },
   {

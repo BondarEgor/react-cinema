@@ -1,41 +1,28 @@
-import {
-  CardContent,
-  Typography,
-  Box,
-  StyledEngineProvider,
-  CardMedia,
-} from "@mui/material";
-import { Movie } from "../../types/movieCard";
+import { CardContent, Typography, Box, CardActionArea } from "@mui/material";
 import "./styles.css";
+import { MovieCard100 } from "../../types/MoviesImdb100";
 import { Link } from "react-router-dom";
 
-interface CardBig {
-  movie: Movie;
-}
-
-export default function MovieCard({ movie }: CardBig) {
-  const { name, year, poster, imdb, genre } = movie;
-  console.log(movie);
+export default function MovieCard({ movie }: MovieCard100) {
+  const { title, description, image, genre, imdb_link, year, rating } = movie;
   return (
-    <StyledEngineProvider injectFirst>
-      <Link
-        className="link"
-        to="#"
-        target="self"
-        rel="noreferrer"
-        style={{ flexGrow: 7, display: "flex" }}
-      >
-        <CardMedia
-          image={poster}
-        >
-          <CardContent className="card-content">
-            <Typography variant="h5" component="div">
-              {name}
-            </Typography>
-            <Typography variant="body2" color="white">
-              Rating: {imdb}
-            </Typography>
-            <Box mt={1}>
+    <>
+      <Link to={imdb_link}>
+        <CardActionArea>
+          <CardContent
+            style={{ backgroundImage: `url(${image})` }}
+            className="card-media card-content"
+          >
+            <Box sx={{ display: "flex", flexDirection: "column" }}>
+              <Typography variant="h5" component="div">
+                {title}
+              </Typography>
+              <Typography variant="h6" component="div">
+                {description}
+              </Typography>
+              <Typography variant="body2" color="white">
+                Rating: {rating}
+              </Typography>
               <Typography variant="body2" color="white">
                 Genre: {genre}
               </Typography>
@@ -44,8 +31,8 @@ export default function MovieCard({ movie }: CardBig) {
               </Typography>
             </Box>
           </CardContent>
-        </CardMedia>
+        </CardActionArea>
       </Link>
-    </StyledEngineProvider>
+    </>
   );
 }
