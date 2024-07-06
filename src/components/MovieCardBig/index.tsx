@@ -13,22 +13,36 @@ export default function MovieCard({ movie }: MovieCard100) {
             style={{ backgroundImage: `url(${image})` }}
             className="card-media card-content"
           >
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Typography variant="h5" component="div">
-                {title}
-              </Typography>
-              <Typography variant="h6" component="div">
-                {description}
-              </Typography>
-              <Typography variant="body2" color="white">
-                Rating: {rating}
-              </Typography>
-              <Typography variant="body2" color="white">
-                Genre: {genre}
-              </Typography>
-              <Typography variant="body2" color="white">
-                Year: {year}
-              </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "end",
+              }}
+            >
+              <Box>
+                <Typography variant="h4" component="div">
+                  {title}
+                </Typography>
+              </Box>
+              <Box>
+                <Typography sx={{fontWeight:300}}  component="div">
+                  {description}
+                </Typography>
+              </Box>
+              <Box sx={{ display: "flex", gap: "10px" }}>
+                <Typography className='text-orange-400'>
+                  Year: 
+                  <span className='text-gray-300'>{year}</span>
+                </Typography>
+                <Typography className='text-orange-400'>
+                  Rating: 
+                  <span className='text-gray-300'>{rating}</span>
+                </Typography>
+                <Typography className='text-orange-400'>
+                  {genre}
+                </Typography>
+              </Box>
             </Box>
           </CardContent>
         </CardActionArea>

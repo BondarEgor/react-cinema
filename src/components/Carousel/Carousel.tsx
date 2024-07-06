@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import CarouselCard from "../CarouselCard/CarouselCard";
+import CarouselCard from "../CarouselCard";
 import { responsive } from "./responsive";
 import { MoviesImdb100 } from '../../types/MoviesImdb100'
 

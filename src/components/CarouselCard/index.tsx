@@ -1,10 +1,12 @@
 import { Box, Card, CardActionArea, SvgIcon, Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import { CarouseCard } from "../../types/CarouselCard";
+import { Link } from 'react-router-dom'
 
 export default function CarouselCard({ movie }: CarouseCard) {
   return (
     <>
+    <Link to={movie.imdb_link}>
       <CardActionArea>
         <Card
           sx={{
@@ -13,8 +15,9 @@ export default function CarouselCard({ movie }: CarouseCard) {
             objectFit: "cover",
             backgroundImage: `url(${movie.image})`,
           }}
-        ></Card>
+          ></Card>
       </CardActionArea>
+          </Link>
       <Box
         sx={{
           display: "flex",
@@ -34,7 +37,6 @@ export default function CarouselCard({ movie }: CarouseCard) {
           <SvgIcon>
             <StarIcon color="warning" />
           </SvgIcon>
-          <Typography fontWeight={300}>{}</Typography>
         </Box>
       </Box>
     </>
