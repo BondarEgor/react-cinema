@@ -1,19 +1,19 @@
 import { Login, Logout } from "@mui/icons-material";
 import SidebarLink from "../SidebarLink/SidebarLink";
-import "./Sidebar.css";
-import { links } from "./links";
-import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import "./styles.css";
+import { links } from "./constants";
+import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { link } from "fs";
 
 export default function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [active, setActive] = useState("");
   const [loggedIn, setLoggedIn] = useState(!!localStorage.getItem("token"));
 
-  useEffect(() => {
-    setActive(location.pathname);
-  }, [location.pathname]);
+  const activeLink = links.findIndex((link) =>
+    location.pathname.includes(link.href)
+  );
 
   function handleAuthClick() {
     if (loggedIn) {
@@ -31,8 +31,7 @@ export default function Sidebar() {
           <ul className="space-y-2 font-medium">
             {links.map((link, index) => (
               <SidebarLink
-                isActive={active === `/${link.href}`}
-                onClick={() => setActive(`/${link.href}`)}
+                isActive={activeLink === link.id}
                 key={index}
                 icon={link.icon}
                 href={`/${link.href}`}
@@ -40,12 +39,9 @@ export default function Sidebar() {
             ))}
           </ul>
           <div className="logout">
-            <SidebarLink
-              isActive={active === "/auth"}
-              onClick={handleAuthClick}
-              icon={loggedIn ? <Logout /> : <Login />}
-              href={loggedIn ? "#" : "/auth"}
-            />
+            <Link onClick={handleAuthClick} to={loggedIn ? "#" : "/auth"}>
+              {loggedIn ? <Logout /> : <Login />}
+            </Link>
           </div>
         </div>
       </aside>

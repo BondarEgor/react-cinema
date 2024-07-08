@@ -5,146 +5,168 @@
   "movies": [
     {
       "id": 1,
-      "name": "Drakula",
-      "year": 2024,
-      "imdb": 5.1,
-      "movieLength": 80,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
       "genre": "Horror",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
     },
     {
       "id": 2,
-      "name": "Drakula",
-      "year": 2024,
-      "imdb": 5.1,
-      "movieLength": 80,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
       "genre": "Horror",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
     },
     {
       "id": 3,
-      "name": "Drakula",
-      "year": 2024,
-      "imdb": 5.1,
-      "movieLength": 80,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
       "genre": "Horror",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
-    }, {
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
+    },
+    {
       "id": 4,
-      "name": "Drakula",
-      "year": 2024,
-      "imdb": 5.1,
-      "movieLength": 80,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
       "genre": "Horror",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
     },
     {
       "id": 5,
-      "name": "Inception",
-      "year": 2010,
-      "imdb": 8.8,
-      "movieLength": 148,
+      "title": "Inception",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
       "genre": "Fantasy",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+      "rating": "8.8",
+      "year": "2010",
+      "imdb_link": "",
+      "movieLength": 148
     },
     {
       "id": 6,
-      "name": "Interstellar",
-      "year": 2014,
-      "imdb": 8.6,
-      "movieLength": 169,
+      "title": "Interstellar",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/1920x1200/e/c0/nachalo-inception-aktery-stoyat.jpg",
       "genre": "Fantasy",
-      "poster": "https://img.goodfon.ru/original/1920x1200/e/c0/nachalo-inception-aktery-stoyat.jpg"
+      "rating": "8.6",
+      "year": "2014",
+      "imdb_link": "",
+      "movieLength": 169
     },
     {
       "id": 7,
-      "name": "The Dark Knight",
-      "year": 2008,
-      "imdb": 9,
-      "movieLength": 152,
+      "title": "The Dark Knight",
+      "description": "",
+      "image": "https://i.artfile.me/wallpaper/16-10-2017/3488x2180/kino-filmy-baby-driver-baby-driver-1250016.jpg",
       "genre": "Drama",
-      "poster": "https://i.artfile.me/wallpaper/16-10-2017/3488x2180/kino-filmy-baby-driver-baby-driver-1250016.jpg"
+      "rating": "9",
+      "year": "2008",
+      "imdb_link": "",
+      "movieLength": 152
     },
     {
       "id": 8,
-      "name": "Pulp Fiction",
-      "year": 1994,
-      "imdb": 8.9,
-      "movieLength": 154,
+      "title": "Pulp Fiction",
+      "description": "",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/014/950/735/large/imaginative-hobbyist-birdsofpreyposter.jpg?1546451236",
       "genre": "Drama",
-      "poster": "https://cdnb.artstation.com/p/assets/images/images/014/950/735/large/imaginative-hobbyist-birdsofpreyposter.jpg?1546451236"
+      "rating": "8.9",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 154
     },
     {
       "id": 9,
-      "name": "Fight Club",
-      "year": 1999,
-      "imdb": 8.8,
-      "movieLength": 139,
-      "genre": "Comedy",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre":"Comedy",
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
     },
     {
       "id": 10,
-      "name": "Forrest Gump",
-      "year": 1994,
-      "imdb": 8.8,
-      "movieLength": 142,
+      "title": "Forrest Gump",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg",
       "genre": "History",
-      "poster": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
+      "rating": "8.8",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 142
     },
     {
       "id": 11,
-      "name": "The Matrix",
-      "year": 1999,
-      "imdb": 8.7,
-      "movieLength": 136,
+      "title": "The Matrix",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/3a/2a/c0/3a2ac074bb4a4f6607d0cde8c0e796e9.jpg",
       "genre": "Fantasy",
-      "poster": "https://i.pinimg.com/originals/3a/2a/c0/3a2ac074bb4a4f6607d0cde8c0e796e9.jpg"
+      "rating": "8.7",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 136
     },
     {
       "id": 12,
-      "name": "Goodfellas",
-      "year": 1990,
-      "imdb": 8.7,
-      "movieLength": 146,
+      "title": "Goodfellas",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/3a/53/1c/3a531c913e4b18e71b1676a0d2222105.jpg",
       "genre": "Drama",
-      "poster": "https://i.pinimg.com/originals/3a/53/1c/3a531c913e4b18e71b1676a0d2222105.jpg"
+      "rating": "8.7",
+      "year": "1990",
+      "imdb_link": "",
+      "movieLength": 146
     },
     {
       "id": 13,
-      "name": "Shawshank",
-      "year": 1994,
-      "imdb": 9.3,
-      "movieLength": 142,
-      "genre": "History",
-      "poster": "https://i.pinimg.com/originals/71/a5/5c/71a55c7b431b94bd84ffb2ee310246e5.jpg"
+      "title": "Shawshank",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/71/a5/5c/71a55c7b431b94bd84ffb2ee310246e5.jpg",
+      "genre": ["History"],
+      "rating": "9.3",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 142
     },
     {
       "id": 14,
-      "name": "Fight Club",
-      "year": 1999,
-      "imdb": 8.8,
-      "movieLength": 139,
-      "genre": "Comedy",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
-    },
-    {
-      "id": 14,
-      "name": "Fight Club",
-      "year": 1999,
-      "imdb": 8.8,
-      "movieLength": 139,
-      "genre": "Comedy",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": ["Comedy"],
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
     },
     {
       "id": 15,
-      "name": "Fight Club",
-      "year": 1999,
-      "imdb": 8.8,
-      "movieLength": 139,
-      "genre": "Comedy",
-      "poster": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": ["Comedy"],
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
     }
   ],
   "series": [

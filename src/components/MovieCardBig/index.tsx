@@ -6,12 +6,11 @@ import { Link } from "react-router-dom";
 export default function MovieCard({ movie }: MovieCard100) {
   const { title, description, image, genre, imdb_link, year, rating } = movie;
   return (
-    <>
-      <Link to={imdb_link}>
+      <Link style={{flexGrow:7}} to={imdb_link}>
         <CardActionArea>
           <CardContent
             style={{ backgroundImage: `url(${image})` }}
-            className="card-media card-content"
+            className="card-media card-content flex-grow-7"
           >
             <Box
               sx={{
@@ -31,15 +30,15 @@ export default function MovieCard({ movie }: MovieCard100) {
                 </Typography>
               </Box>
               <Box sx={{ display: "flex", gap: "10px" }}>
-                <Typography className='text-orange-400'>
+                <Typography sx={{fontSize:'18px'}}>
                   Year: 
                   <span className='text-gray-300'>{year}</span>
                 </Typography>
-                <Typography className='text-orange-400'>
+                <Typography sx={{fontSize:'18px'}}>
                   Rating: 
                   <span className='text-gray-300'>{rating}</span>
                 </Typography>
-                <Typography className='text-orange-400'>
+                <Typography sx={{fontSize:'18px'}}>
                   {genre}
                 </Typography>
               </Box>
@@ -47,6 +46,5 @@ export default function MovieCard({ movie }: MovieCard100) {
           </CardContent>
         </CardActionArea>
       </Link>
-    </>
   );
 }

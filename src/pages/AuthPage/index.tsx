@@ -50,7 +50,7 @@ export default function AuthPage() {
             isRequired={true}
           />
 
-          <Button variant="contained" className="loginBtn" type="submit">
+          <Button variant="contained" color="warning" className="loginBtn" type="submit">
             Log in
           </Button>
           <Button
@@ -58,6 +58,7 @@ export default function AuthPage() {
             variant="outlined"
             className="loginBtn"
             type="submit"
+            color='info'
           >
             Clear
           </Button>

@@ -3,44 +3,34 @@ import CustomCarousel from "../../components/Carousel/Carousel";
 import Loader from "../../components/Loader/Loader";
 import MovieCard from "../../components/MovieCardBig";
 import { MovieCardSmall } from "../../components/MovieCardSmall";
-import { getTopMovies } from "../../services/api.services";
 import { filterButtons } from "./constants";
 import ErrorPage from "../ErrorPage";
 import { useQuery } from "react-query";
 import "./style.css";
 import { useParams } from "react-router-dom";
 import CustomLink from "../../components/kit/Link";
+import { fetchArticles } from "./utils";
+import { getTopMovies } from "../../services/api.services";
 
 export default function HomePage() {
   const { genre } = useParams();
 
   const activeButton = filterButtons.findIndex((button) => {
+    if (genre === undefined) {
+      return true;
+    }
     return button.label === genre;
   });
 
-  const fetchArticles = async () => {
-    const url = `${process.env.REACT_APP_NEWS_MOVIES}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    const articles = data["articles"];
-
-    return articles;
-  };
-  const fetchMovies = async () => {
-    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}`, {
-      headers: {
-        "x-rapidapi-key": "7505d69b34msh4e599e0255c0608p150ca5jsn7817adc1cb01",
-      },
-    });
-    const data = await response.json();
-    return data;
-  };
+  async function fetchData() {
+    return await getTopMovies(genre ?? "");
+  }
 
   const {
-    data: imdbMovies,
-    isLoading: isImdbLoading,
-    isError: isImdbError,
-  } = useQuery("imdb", fetchMovies);
+    data: movies,
+    isLoading: isMoviesLoading,
+    isError: isMoviesError,
+  } = useQuery(["movies", genre], fetchData);
 
   const {
     data: articles,
@@ -48,15 +38,15 @@ export default function HomePage() {
     isError: isNewsError,
   } = useQuery("news", fetchArticles);
 
-  if (isImdbError || isNewsError) {
+  if (isMoviesError || isNewsError) {
     return <ErrorPage />;
   }
 
-  if (isImdbLoading || isNewsLoading) {
+  if (isMoviesLoading || isNewsLoading) {
     return <Loader loading={true} />;
   }
 
-  if (!imdbMovies || !articles) {
+  if (!movies || !articles) {
     return <h3>No data</h3>;
   }
 
@@ -91,7 +81,7 @@ export default function HomePage() {
         </Box>
       </Box>
       <Box sx={{ display: "flex", gap: "20px" }}>
-        <MovieCard movie={imdbMovies[0]} />
+        <MovieCard movie={movies[1]} />
         <MovieCardSmall article={articles[0]} />
       </Box>
       <Box>
@@ -99,7 +89,7 @@ export default function HomePage() {
           Special for you
         </Typography>
 
-        <CustomCarousel data={imdbMovies} />
+        <CustomCarousel data={movies} />
       </Box>
     </Container>
   );
