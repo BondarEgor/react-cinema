@@ -9,7 +9,7 @@ async function getTopMedia(type: "movies" | "series", query?: string) {
     
     return data;
   } catch (error) {
-    return false;
+    console.error(error)
   }
 }
 
