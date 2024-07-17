@@ -4,50 +4,32 @@ import Loader from "../../components/Loader/Loader";
 import MovieCard from "../../components/MovieCardBig";
 import { MovieCardSmall } from "../../components/MovieCardSmall";
 import { filterButtons } from "./constants";
-import ErrorPage from "../ErrorPage";
-import { useQuery } from "react-query";
 import "./style.css";
 import { useParams } from "react-router-dom";
 import CustomLink from "../../components/kit/Link";
-import { fetchArticles } from "./utils";
-import { getTopMovies } from "../../services/api.services";
+import NotFoundPage from "../NotFoundPage/Index";
+import { useMediaInfo } from '../../hooks/useMedia'
 
 export default function HomePage() {
   const { genre } = useParams();
-
   const activeButton = filterButtons.findIndex((button) => {
     if (genre === undefined) {
       return true;
     }
     return button.label === genre;
   });
+  const {isError, isLoading, movies, articles} = useMediaInfo(genre)
 
-  async function fetchData() {
-    return await getTopMovies(genre ?? "");
+  if (isError) {
+    return <NotFoundPage></NotFoundPage>;
   }
 
-  const {
-    data: movies,
-    isLoading: isMoviesLoading,
-    isError: isMoviesError,
-  } = useQuery(["movies", genre], fetchData);
-
-  const {
-    data: articles,
-    isLoading: isNewsLoading,
-    isError: isNewsError,
-  } = useQuery("news", fetchArticles);
-
-  if (isMoviesError || isNewsError) {
-    return <ErrorPage />;
-  }
-
-  if (isMoviesLoading || isNewsLoading) {
+  if (isLoading) {
     return <Loader loading={true} />;
   }
 
   if (!movies || !articles) {
-    return <h3>No data</h3>;
+    return <NotFoundPage></NotFoundPage>
   }
 
   return (
