@@ -2,6 +2,28 @@
   "login": {
     "apiId": "v1"
   },
+  "userinfo": {
+    "name": "John Brown",
+    "job": "Fullstack Developer",
+    "origin": "Bay area, San francisco",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-62cBkRVu4xwP0c9Nkv4-2RPZvwqYB9k3lg&s"
+  },
+  "socials": [
+    { "name": "twitter", "value": "twitter@com" },
+    { "name": "youtube", "value": "youtube@com" },
+    { "name": "telegram", "value": "telegram@com" },
+    { "name": "instagram", "value": "instagram@com" },
+    { "name": "facebook", "value": "facebook@com" }
+  ],
+
+  "creds": [
+    { "name": "Full Name", "value": "John Brown" },
+    { "name": "Job phone", "value": "(912)-912-12-12" },
+    { "name": "Cell phone", "value": "(912)-912-11-11" },
+    { "name": "Country", "value": "Swetzerland" },
+    { "name": "age", "value": "75" }
+  ],
+
   "movies": [
     {
       "id": 1,
@@ -96,7 +118,7 @@
       "title": "Fight Club",
       "description": "",
       "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
-      "genre":"Comedy",
+      "genre": "Comedy",
       "rating": "8.8",
       "year": "1999",
       "imdb_link": "",

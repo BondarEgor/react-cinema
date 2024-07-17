@@ -23,8 +23,6 @@ export default function HomePage() {
   });
 
   async function fetchData() {
-    const data = await getTopMovies()
-    console.log(data)
     return await getTopMovies(genre ?? "");
   }
 

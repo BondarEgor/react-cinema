@@ -1,109 +1,85 @@
-import { Avatar, Button, LinearProgress, Typography } from "@mui/material";
 import "./styles.css";
 import UserInfoAvatar from "../../components/UserCardAvatar";
+import FieldWithUnderscore from "../../components/kit/FieldWithUnderscore";
+import { socials, userCredentials } from "./constants";
+import ProjectStatus from "../../components/kit/ProjectStatus";
+import { useUserInfo } from "../../hooks/useUserInfo";
+import { useUserCredentials } from "../../hooks/useUserCredentials";
+import { useUserSocials } from "../../hooks/useUserSocials";
 
 export default function ProfilePage() {
+  const {
+    data: userInfo,
+    isLoading: userInfoLoading,
+    isError: userInfoError,
+  } = useUserInfo();
+
+  const {
+    data: userCred,
+    isLoading: userCredLoading,
+    isError: userCredError,
+  } = useUserCredentials();
+
+  const {
+    data: userSocials,
+    isLoading: userSocialsLoading,
+    isError: userSocialsError,
+  } = useUserSocials();
+
+  if (userCredLoading || userInfoLoading || userSocialsLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (userCredError || userInfoError || userSocialsError) {
+    return <p>Error...</p>;
+  }
+
   return (
     <div className="main-block">
       <aside className="aside">
-        <UserInfoAvatar></UserInfoAvatar>
+        <UserInfoAvatar
+          name={userInfo?.name}
+          job={userInfo?.job}
+          origin={userInfo?.origin}
+          poster={userInfo?.poster}
+        ></UserInfoAvatar>
         <div className="socials">
-          <div className="card-row flex p-5 justify-around">
-            <div className="flex-1 col font-bold">
-              <i className="fa-brands fa-twitter"></i>
-            </div>
-            <div className="flex-1 col-right  font-light">
-              example@example.com
-            </div>
-          </div>
-          <hr />
-
-          <div className="card-row flex p-5 justify-around">
-            <div className="flex-1 col font-bold">Email</div>
-            <div className="flex-1 col-right  font-light">
-              example@example.com
-            </div>
-          </div>
-          <hr />
-
-          <div className="card-row flex p-5 justify-around">
-            <div className="flex-1 col font-bold">Email</div>
-            <div className="flex-1 col-right  font-light">
-              example@example.com
-            </div>
-          </div>
-          <hr />
-
-          <div className="card-row flex p-5 justify-around">
-            <div className="flex-1 col font-bold">Email</div>
-            <div className="flex-1 col-right  font-light">
-              example@example.com
-            </div>
-          </div>
-          <hr />
-
-          <div className="card-row flex p-5 justify-around">
-            <div className="flex-1 col font-bold">Email</div>
-            <div className="flex-1 col-right  font-light">
-              example@example.com
-            </div>
-          </div>
+          {userSocials?.map((social: any, index: any) => {
+            return (
+              <FieldWithUnderscore
+                key={social.name}
+                isTextNeeded={false}
+                fieldKey={social.name}
+                fieldValue={social.value}
+                isLastField={socials.length - 1 === index}
+              ></FieldWithUnderscore>
+            );
+          })}
         </div>
       </aside>
-
       <main className="main">
         <div className="personal-data">
           <div className="card-body">
-            <div className="card-row flex p-5 justify-around">
-              <div className="col font-bold flex-1">Full name</div>
-              <div className="flex-1 col-right  font-light">
-                Johnathan Brown
-              </div>
-            </div>
-            <hr />
-            <div className="card-row flex p-5 justify-around">
-              <div className="flex-1 col font-bold">Email</div>
-              <div className="flex-1 col-right  font-light">
-                example@example.com
-              </div>
-            </div>
-            <hr />
-            <div className="card-row flex p-5 justify-around">
-              <div className="flex-1 col font-bold">Phone</div>
-              <div className="flex-1 col-right  font-light">(097) 234-5678</div>
-            </div>
-            <hr />
-            <div className="card-row flex p-5 justify-around">
-              <div className="flex-1 col font-bold">Mobile</div>
-              <div className="flex-1 col-right  font-light">(098) 765-4321</div>
-            </div>
-            <hr />
-            <div className="card-row flex p-5 justify-around">
-              <div className="flex-1 col font-bold">Address</div>
-              <div className="flex-1 col-right  font-light">
-                Bay Area, San Francisco, CA
-              </div>
-            </div>
+            {userCred.map((credential: any, index: any) => {
+              return (
+                <FieldWithUnderscore
+                  key={credential.name}
+                  fieldKey={credential.name}
+                  fieldValue={credential.value}
+                  isLastField={userCredentials.length - 1 === index}
+                  isTextNeeded={true}
+                ></FieldWithUnderscore>
+              );
+            })}
           </div>
         </div>
+
         <div className="projects">
           <div className="project-1">
-            <div>
-              asignment<span>Project status</span>
-            </div>
-            <div>
-              <span>Web Design</span>
-              <LinearProgress variant="determinate" value={90} />
-            </div>
+            <ProjectStatus></ProjectStatus>
           </div>
           <div className="project-2">
-            <div>
-              asignment<span>Project status</span>
-            </div>
-            <div>
-              <span>Web Design</span>
-              <LinearProgress variant="determinate" value={90} />
-            </div>
+            <ProjectStatus></ProjectStatus>
           </div>
         </div>
       </main>
