@@ -1,5 +1,5 @@
-import { useQuery } from 'react-query'
-import { fetchUserSocials } from '../pages/ProfilePage/utils'
+import { useQueries, useQuery } from 'react-query'
+import { fetchUserInfo, fetchUserSocials } from '../pages/ProfilePage/utils'
 
 export interface IUserSocials {
 	name: string

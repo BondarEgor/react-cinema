@@ -1,37 +1,22 @@
 import "./styles.css";
 import UserInfoAvatar from "../../components/UserCardAvatar";
 import FieldWithUnderscore from "../../components/kit/FieldWithUnderscore";
-import { socials, userCredentials } from "./constants";
+import { socials } from "./constants";
 import ProjectStatus from "../../components/kit/ProjectStatus";
 import { useUserInfo } from "../../hooks/useUserInfo";
-import { useUserCredentials } from "../../hooks/useUserCredentials";
-import { useUserSocials } from "../../hooks/useUserSocials";
+import NotFoundPage from '../NotFoundPage/Index'
+import Loader from '../../components/Loader/Loader'
 
 export default function ProfilePage() {
-  const {
-    data: userInfo,
-    isLoading: userInfoLoading,
-    isError: userInfoError,
-  } = useUserInfo();
+  
+  const {isLoading, isError, userCredentials, userInfo, userSocials} = useUserInfo()
 
-  const {
-    data: userCred,
-    isLoading: userCredLoading,
-    isError: userCredError,
-  } = useUserCredentials();
-
-  const {
-    data: userSocials,
-    isLoading: userSocialsLoading,
-    isError: userSocialsError,
-  } = useUserSocials();
-
-  if (userCredLoading || userInfoLoading || userSocialsLoading) {
-    return <p>Loading...</p>;
+  if (isLoading) {
+    return <Loader loading={true}></Loader>
   }
 
-  if (userCredError || userInfoError || userSocialsError) {
-    return <p>Error...</p>;
+  if (isError) {
+    return <NotFoundPage></NotFoundPage>
   }
 
   return (
@@ -60,7 +45,7 @@ export default function ProfilePage() {
       <main className="main">
         <div className="personal-data">
           <div className="card-body">
-            {userCred.map((credential: any, index: any) => {
+            {userCredentials.map((credential: any, index: any) => {
               return (
                 <FieldWithUnderscore
                   key={credential.name}

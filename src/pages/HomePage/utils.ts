@@ -8,11 +8,3 @@ export const fetchArticles = async () => {
 
 	return articles
 }
-
-export const fetchMovies = async () => {
-	const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/movies`, {
-		headers: API_KEY,
-	})
-	const data = await response.json()
-	return data
-}

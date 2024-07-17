@@ -1,6 +1,4 @@
-import "./styles.css";
-
-interface FieldProps {
+  interface FieldProps {
   fieldKey: string;
   fieldValue: string;
   isLastField: boolean;

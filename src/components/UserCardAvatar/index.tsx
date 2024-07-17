@@ -1,8 +1,8 @@
 import { Avatar, Typography, Button, Box } from "@mui/material";
 import "./styles.css";
-import { IUserInfo } from "../../hooks/useUserInfo";
-import { useState } from "react";
 import { useFollowUser } from "../../hooks/useFollowUser";
+import { buttonState } from "./constants";
+import { IUserInfo } from '../../hooks/useUserInfo'
 
 export default function UserInfoAvatar({
   name,
@@ -29,7 +29,7 @@ export default function UserInfoAvatar({
             variant={isFollowed ? "outlined" : "contained"}
             color="warning"
           >
-            {isFollowed ? "Unfollow" : "Follow"}
+            {isFollowed ? buttonState.unfollow : buttonState.follow}
           </Button>
           <Button variant="outlined" color="warning">
             Message
