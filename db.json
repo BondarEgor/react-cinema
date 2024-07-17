@@ -1,97 +1,172 @@
 {
   "login": {
-    "token": "i1pomro1i2mo124m12oi4m12orfng-42 "
+    "apiId": "v1"
   },
   "movies": [
     {
       "id": 1,
-      "name": "Drakula",
-      "year": 2024,
-      "imdb": 5.1,
-      "movieLength": 80,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
       "genre": "Horror",
-      "poster": "https://image.openmoviedb.com/kinopoisk-images/10703959/7af798b4-5550-4c99-98fc-1dae108bc454/orig"
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
     },
     {
       "id": 2,
-      "name": "Inception",
-      "year": 2010,
-      "imdb": 8.8,
-      "movieLength": 148,
-      "genre": "Fantasy",
-      "poster": "https://image.openmoviedb.com/inception/poster.jpg"
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Horror",
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
     },
     {
       "id": 3,
-      "name": "Interstellar",
-      "year": 2014,
-      "imdb": 8.6,
-      "movieLength": 169,
-      "genre": "Fantasy",
-      "poster": "https://image.openmoviedb.com/interstellar/poster.jpg"
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Horror",
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
     },
     {
       "id": 4,
-      "name": "The Dark Knight",
-      "year": 2008,
-      "imdb": 9.0,
-      "movieLength": 152,
-      "genre": "Drama",
-      "poster": "https://image.openmoviedb.com/thedarkknight/poster.jpg"
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Horror",
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
     },
     {
       "id": 5,
-      "name": "Pulp Fiction",
-      "year": 1994,
-      "imdb": 8.9,
-      "movieLength": 154,
-      "genre": "Drama",
-      "poster": "https://image.openmoviedb.com/pulpfiction/poster.jpg"
+      "title": "Inception",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Fantasy",
+      "rating": "8.8",
+      "year": "2010",
+      "imdb_link": "",
+      "movieLength": 148
     },
     {
       "id": 6,
-      "name": "Fight Club",
-      "year": 1999,
-      "imdb": 8.8,
-      "movieLength": 139,
-      "genre": "Drama",
-      "poster": "https://image.openmoviedb.com/fightclub/poster.jpg"
+      "title": "Interstellar",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/1920x1200/e/c0/nachalo-inception-aktery-stoyat.jpg",
+      "genre": "Fantasy",
+      "rating": "8.6",
+      "year": "2014",
+      "imdb_link": "",
+      "movieLength": 169
     },
     {
       "id": 7,
-      "name": "Forrest Gump",
-      "year": 1994,
-      "imdb": 8.8,
-      "movieLength": 142,
+      "title": "The Dark Knight",
+      "description": "",
+      "image": "https://i.artfile.me/wallpaper/16-10-2017/3488x2180/kino-filmy-baby-driver-baby-driver-1250016.jpg",
       "genre": "Drama",
-      "poster": "https://image.openmoviedb.com/forrestgump/poster.jpg"
+      "rating": "9",
+      "year": "2008",
+      "imdb_link": "",
+      "movieLength": 152
     },
     {
       "id": 8,
-      "name": "The Matrix",
-      "year": 1999,
-      "imdb": 8.7,
-      "movieLength": 136,
-      "genre": "Fantasy",
-      "poster": "https://image.openmoviedb.com/thematrix/poster.jpg"
+      "title": "Pulp Fiction",
+      "description": "",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/014/950/735/large/imaginative-hobbyist-birdsofpreyposter.jpg?1546451236",
+      "genre": "Drama",
+      "rating": "8.9",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 154
     },
     {
       "id": 9,
-      "name": "Goodfellas",
-      "year": 1990,
-      "imdb": 8.7,
-      "movieLength": 146,
-      "genre": "Drama",
-      "poster": "https://image.openmoviedb.com/goodfellas/poster.jpg"
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre":"Comedy",
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
     },
     {
       "id": 10,
-      "name": "The Shawshank Redemption",
-      "year": 1994,
-      "imdb": 9.3,
-      "movieLength": 142,
+      "title": "Forrest Gump",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg",
+      "genre": "History",
+      "rating": "8.8",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 142
+    },
+    {
+      "id": 11,
+      "title": "The Matrix",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/3a/2a/c0/3a2ac074bb4a4f6607d0cde8c0e796e9.jpg",
+      "genre": "Fantasy",
+      "rating": "8.7",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 136
+    },
+    {
+      "id": 12,
+      "title": "Goodfellas",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/3a/53/1c/3a531c913e4b18e71b1676a0d2222105.jpg",
       "genre": "Drama",
-      "poster": "https://image.openmoviedb.com/shawshank/poster.jpg"
+      "rating": "8.7",
+      "year": "1990",
+      "imdb_link": "",
+      "movieLength": 146
+    },
+    {
+      "id": 13,
+      "title": "Shawshank",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/71/a5/5c/71a55c7b431b94bd84ffb2ee310246e5.jpg",
+      "genre": ["History"],
+      "rating": "9.3",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 142
+    },
+    {
+      "id": 14,
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": ["Comedy"],
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
+    },
+    {
+      "id": 15,
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": ["Comedy"],
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
     }
   ],
   "series": [
@@ -119,7 +194,7 @@
       "year": 2016,
       "imdb": 8.7,
       "seasons": 4,
-      "genre": "Fantasy",
+      "genre": "history",
       "poster": "https://image.openmoviedb.com/strangerthings/poster.jpg"
     },
     {
@@ -128,7 +203,7 @@
       "year": 2019,
       "imdb": 8.2,
       "seasons": 2,
-      "genre": "Fantasy",
+      "genre": "history",
       "poster": "https://image.openmoviedb.com/thewitcher/poster.jpg"
     },
     {

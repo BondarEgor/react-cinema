@@ -1,71 +1,96 @@
-import { Typography, Button } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import CustomCarousel from "../../components/Carousel/Carousel";
 import Loader from "../../components/Loader/Loader";
 import MovieCard from "../../components/MovieCardBig";
-import MovieCardSmall from "../../components/MovieCardSmall/MovieCardSmall";
-import { getTopMovies } from "../../services/api.services";
+import { MovieCardSmall } from "../../components/MovieCardSmall";
 import { filterButtons } from "./constants";
 import ErrorPage from "../ErrorPage";
 import { useQuery } from "react-query";
-import { Link } from "react-router-dom";
 import "./style.css";
 import { useParams } from "react-router-dom";
+import CustomLink from "../../components/kit/Link";
+import { fetchArticles } from "./utils";
+import { getTopMovies } from "../../services/api.services";
 
 export default function HomePage() {
   const { genre } = useParams();
 
-  const activeButton = filterButtons.findIndex(
-    (button) => button.label === genre
-  );
+  const activeButton = filterButtons.findIndex((button) => {
+    if (genre === undefined) {
+      return true;
+    }
+    return button.label === genre;
+  });
 
   async function fetchData() {
     return await getTopMovies(genre ?? "");
   }
 
-  const { data, isLoading, isError } = useQuery(["movies", genre], fetchData);
+  const {
+    data: movies,
+    isLoading: isMoviesLoading,
+    isError: isMoviesError,
+  } = useQuery(["movies", genre], fetchData);
 
-  if (isError) {
+  const {
+    data: articles,
+    isLoading: isNewsLoading,
+    isError: isNewsError,
+  } = useQuery("news", fetchArticles);
+
+  if (isMoviesError || isNewsError) {
     return <ErrorPage />;
   }
 
-  if (isLoading) {
-    return <Loader loading={isLoading} />;
+  if (isMoviesLoading || isNewsLoading) {
+    return <Loader loading={true} />;
   }
 
-  if (!data) {
+  if (!movies || !articles) {
     return <h3>No data</h3>;
   }
 
   return (
-    <div className="lg:h-3/5">
-      <Typography sx={{ marginBottom: 1 }} variant="h4">
-        My cinema
-      </Typography>
-      <div className="button-group">
-        {filterButtons.map((button) => {
-          return (
-            <Link
-              key={button.id}
-              className={`custom-button ${
-                activeButton === button.id ? "active-button" : ""
-              }`}
-              to={`/home/${button.genre}`}
-            >
-              {button.label}
-            </Link>
-          );
-        })}
-      </div>
-      <div className="flex gap-8 mt-5 xs:flex-col">
-        <MovieCard movie={data[1]} />
-        <MovieCardSmall />
-      </div>
-      <div className="mt-3">
+    <Container
+      maxWidth="xl"
+      sx={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-around",
+      }}
+    >
+      <Box>
+        <Typography
+          sx={{ marginBottom: 1, color: "#ff7e00", fontWeight: "600" }}
+          variant="h4"
+        >
+          My cinema
+        </Typography>
+        <Box sx={{ display: "flex", gap: "8px" }}>
+          {filterButtons.map((button, index) => {
+            return (
+              <CustomLink
+                key={index}
+                to={`/home/${button.genre}`}
+                isActiveBtn={activeButton === button.id}
+                label={button.label}
+              />
+            );
+          })}
+        </Box>
+      </Box>
+      <Box sx={{ display: "flex", gap: "20px" }}>
+        <MovieCard movie={movies[1]} />
+        <MovieCardSmall article={articles[0]} />
+      </Box>
+      <Box>
         <Typography marginBottom={1} fontWeight={500} variant="h5">
           Special for you
         </Typography>
-        <CustomCarousel />
-      </div>
-    </div>
+
+        <CustomCarousel data={movies} />
+      </Box>
+    </Container>
   );
 }
