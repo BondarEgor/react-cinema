@@ -28,7 +28,7 @@ export default function CarouselCard({ movie }: CarouseCard) {
           justifyItems: "end",
         }}
       >
-        <Typography fontWeight={500}>{movie.title}</Typography>
+        <Typography sx={{marginLeft:'10px'}} fontWeight={500}>{movie.title}</Typography>
 
         <Box className="flex items-center gap-5">
           <Typography variant="body2" fontWeight={300}>

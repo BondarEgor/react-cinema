@@ -2,6 +2,63 @@
   "login": {
     "apiId": "v1"
   },
+  "favorites": [
+    {
+      "id": 1,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Fishing",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 3,
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 4,
+      "title": "Shawshank",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/71/a5/5c/71a55c7b431b94bd84ffb2ee310246e5.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Forrest Gump",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 6,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 7,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 8,
+      "title": "Game of thrones",
+      "description": "",
+      "image": "https://image.openmoviedb.com/gameofthrones/poster.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    }
+  ],
+
   "userinfo": {
     "name": "John Brown",
     "job": "Fullstack Developer",
