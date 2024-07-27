@@ -1,45 +1,58 @@
 import { useQuery } from "react-query";
 import CarouselCard from "../../components/CarouselCard";
 import "./styles.css";
-import Loader from '../../components/Loader/Loader'
-import NotFoundPage from '../NotFoundPage/Index'
-import { Button } from '@mui/material'
+import Loader from "../../components/Loader/Loader";
+import NotFoundPage from "../NotFoundPage/Index";
+import { useState } from "react";
+import { fetchFavorites } from "./utils";
+import { IFavoriteMovie } from "../../types/IFavoriteMovies";
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 export default function FavoritesPage() {
+  const [filteredValue, setFilteredValue] = useState("");
+  const navigate = useNavigate()
+  const {
+    data: movies,
+    isLoading,
+    isError,
+  } = useQuery<IFavoriteMovie[]>("favoriteMovies", fetchFavorites);
 
-  const fetchFavorites = async () => {
-    const response = await fetch(
-      `${process.env.REACT_APP_API_BASE_URL}/favorites`
-    );
-
-    return await response.json();
+  const handleInputChange = (e: any) => {
+    setFilteredValue(e.target.value);
   };
-  const { data: movies, isLoading, isError } = useQuery("", fetchFavorites);
-  const handleInputChange = () => {
-    console.log(123)
-    
-  }
-  if(isLoading){
-    return <Loader loading={true}></Loader>
+
+  const handleOnClick = (id:number) => {
+		navigate(`/favorites/${id}`)
+	}
+
+  if (isLoading) {
+    return <Loader loading={true}></Loader>;
   }
 
-  if(isError){
-    return <NotFoundPage></NotFoundPage>
+  if (isError) {
+    return <NotFoundPage></NotFoundPage>;
   }
 
   return (
     <>
-      <input onChange={handleInputChange} placeholder='Search your favorite movies' className="search-input" autoFocus />
+      <input
+        onChange={handleInputChange}
+        placeholder="Search your favorite movies"
+        className="search-input"
+      />
       <div className="wrapper">
-        {movies.slice(0,8).map((movie: any) => {
-          return (
-            <div key={movie.id} className="movie-block">
-              <CarouselCard movie={movie}></CarouselCard>
-            </div>
-            
-          );
-        })}
-          <Button fullWidth sx={{width:'100%'}} variant='contained' color='warning'>Load more</Button>
+        {movies
+          ?.filter((movie) =>
+            movie.title.toLowerCase().includes(filteredValue.toLowerCase())
+          )
+          .map((movie: any) => {
+            return (
+              <div onClick={() =>handleOnClick(movie.id)} key={movie.id} className="movie-block">
+                  <CarouselCard movie={movie}></CarouselCard>
+              </div>
+            );
+          })}
       </div>
     </>
   );

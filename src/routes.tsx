@@ -9,6 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 import Layout from "./Layout";
 import ProtectedRoute from "./utils/ProtectedRoute";
+import MovieDetails from './pages/MovieDetailsPage'
 
 const routes: RouteObject[] = [
   { path: "", element: <Navigate to="/home" replace /> },
@@ -35,6 +36,14 @@ const routes: RouteObject[] = [
     element: (
       <ProtectedRoute element={<Layout children={<FavoritesPage />} />} />
     ),
+  },
+  {
+    path:'/favorites/:id',
+    element: (
+      <ProtectedRoute element={
+        <MovieDetails></MovieDetails>
+      }></ProtectedRoute>
+    )
   },
   {
     path: "/search",

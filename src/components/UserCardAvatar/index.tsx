@@ -2,13 +2,14 @@ import { Avatar, Typography, Button, Box } from "@mui/material";
 import "./styles.css";
 import { useFollowUser } from "../../hooks/useFollowUser";
 import { buttonState } from "./constants";
-import { IUserInfo } from '../../hooks/useUserInfo'
+import { IUserInfo } from "../../hooks/useUserInfo";
 
 export default function UserInfoAvatar({
   name,
   job,
   origin,
   poster,
+  isLoading
 }: IUserInfo) {
   const { isFollowed, handleOnFollow } = useFollowUser(false);
 

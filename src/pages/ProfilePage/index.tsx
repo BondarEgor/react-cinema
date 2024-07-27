@@ -8,7 +8,6 @@ import NotFoundPage from '../NotFoundPage/Index'
 import Loader from '../../components/Loader/Loader'
 
 export default function ProfilePage() {
-  
   const {isLoading, isError, userCredentials, userInfo, userSocials} = useUserInfo()
 
   if (isLoading) {
@@ -23,6 +22,7 @@ export default function ProfilePage() {
     <div className="main-block">
       <aside className="aside">
         <UserInfoAvatar
+          isLoading={true}
           name={userInfo?.name}
           job={userInfo?.job}
           origin={userInfo?.origin}
