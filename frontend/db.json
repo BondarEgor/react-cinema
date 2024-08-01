@@ -1,0 +1,373 @@
+{
+  "login": {
+    "apiId": "v1"
+  },
+  "favorites": [
+    {
+      "id": 1,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Fishing",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 3,
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 4,
+      "title": "Shawshank",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/71/a5/5c/71a55c7b431b94bd84ffb2ee310246e5.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Forrest Gump",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 6,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 7,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 8,
+      "title": "Game of thrones",
+      "description": "",
+      "image": "https://image.openmoviedb.com/gameofthrones/poster.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13"
+    },
+    {
+      "id": 10,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg"
+    }
+  ],
+
+  "userinfo": {
+    "name": "John Brown",
+    "job": "Fullstack Developer",
+    "origin": "Bay area, San francisco",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-62cBkRVu4xwP0c9Nkv4-2RPZvwqYB9k3lg&s"
+  },
+  "socials": [
+    { "name": "twitter", "value": "twitter@com" },
+    { "name": "youtube", "value": "youtube@com" },
+    { "name": "telegram", "value": "telegram@com" },
+    { "name": "instagram", "value": "instagram@com" },
+    { "name": "facebook", "value": "facebook@com" }
+  ],
+
+  "creds": [
+    { "name": "Full Name", "value": "John Brown" },
+    { "name": "Job phone", "value": "(912)-912-12-12" },
+    { "name": "Cell phone", "value": "(912)-912-11-11" },
+    { "name": "Country", "value": "Swetzerland" },
+    { "name": "age", "value": "75" }
+  ],
+
+  "movies": [
+    {
+      "id": 1,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Horror",
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
+    },
+    {
+      "id": 2,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Horror",
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
+    },
+    {
+      "id": 3,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Horror",
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
+    },
+    {
+      "id": 4,
+      "title": "Drakula",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Horror",
+      "rating": "5.1",
+      "year": "2024",
+      "imdb_link": "",
+      "movieLength": 80
+    },
+    {
+      "id": 5,
+      "title": "Inception",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Fantasy",
+      "rating": "8.8",
+      "year": "2010",
+      "imdb_link": "",
+      "movieLength": 148
+    },
+    {
+      "id": 6,
+      "title": "Interstellar",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/1920x1200/e/c0/nachalo-inception-aktery-stoyat.jpg",
+      "genre": "Fantasy",
+      "rating": "8.6",
+      "year": "2014",
+      "imdb_link": "",
+      "movieLength": 169
+    },
+    {
+      "id": 7,
+      "title": "The Dark Knight",
+      "description": "",
+      "image": "https://i.artfile.me/wallpaper/16-10-2017/3488x2180/kino-filmy-baby-driver-baby-driver-1250016.jpg",
+      "genre": "Drama",
+      "rating": "9",
+      "year": "2008",
+      "imdb_link": "",
+      "movieLength": 152
+    },
+    {
+      "id": 8,
+      "title": "Pulp Fiction",
+      "description": "",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/014/950/735/large/imaginative-hobbyist-birdsofpreyposter.jpg?1546451236",
+      "genre": "Drama",
+      "rating": "8.9",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 154
+    },
+    {
+      "id": 9,
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": "Comedy",
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
+    },
+    {
+      "id": 10,
+      "title": "Forrest Gump",
+      "description": "",
+      "image": "https://img.goodfon.ru/original/2880x1800/c/79/pribytie-arrival-fantastika-poster-kollazh-dzheremi-renner-j.jpg",
+      "genre": "History",
+      "rating": "8.8",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 142
+    },
+    {
+      "id": 11,
+      "title": "The Matrix",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/3a/2a/c0/3a2ac074bb4a4f6607d0cde8c0e796e9.jpg",
+      "genre": "Fantasy",
+      "rating": "8.7",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 136
+    },
+    {
+      "id": 12,
+      "title": "Goodfellas",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/3a/53/1c/3a531c913e4b18e71b1676a0d2222105.jpg",
+      "genre": "Drama",
+      "rating": "8.7",
+      "year": "1990",
+      "imdb_link": "",
+      "movieLength": 146
+    },
+    {
+      "id": 13,
+      "title": "Shawshank",
+      "description": "",
+      "image": "https://i.pinimg.com/originals/71/a5/5c/71a55c7b431b94bd84ffb2ee310246e5.jpg",
+      "genre": ["History"],
+      "rating": "9.3",
+      "year": "1994",
+      "imdb_link": "",
+      "movieLength": 142
+    },
+    {
+      "id": 14,
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": ["Comedy"],
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
+    },
+    {
+      "id": 15,
+      "title": "Fight Club",
+      "description": "",
+      "image": "https://avatars.mds.yandex.net/i?id=946db236493c2c6f567cfb2503267e44b64ce814-5284061-images-thumbs&n=13",
+      "genre": ["Comedy"],
+      "rating": "8.8",
+      "year": "1999",
+      "imdb_link": "",
+      "movieLength": 139
+    }
+  ],
+  "series": [
+    {
+      "id": 1,
+      "name": "Breaking Bad",
+      "year": 2008,
+      "imdb": 9.5,
+      "seasons": 5,
+      "genre": "Drama",
+      "poster": "https://image.openmoviedb.com/breakingbad/poster.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Game of Thrones",
+      "year": 2011,
+      "imdb": 9.3,
+      "seasons": 8,
+      "genre": "Fantasy",
+      "poster": "https://image.openmoviedb.com/gameofthrones/poster.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Stranger Things",
+      "year": 2016,
+      "imdb": 8.7,
+      "seasons": 4,
+      "genre": "history",
+      "poster": "https://image.openmoviedb.com/strangerthings/poster.jpg"
+    },
+    {
+      "id": 4,
+      "name": "The Witcher",
+      "year": 2019,
+      "imdb": 8.2,
+      "seasons": 2,
+      "genre": "history",
+      "poster": "https://image.openmoviedb.com/thewitcher/poster.jpg"
+    },
+    {
+      "id": 5,
+      "name": "The Mandalorian",
+      "year": 2019,
+      "imdb": 8.8,
+      "seasons": 2,
+      "genre": "Fantasy",
+      "poster": "https://image.openmoviedb.com/themandalorian/poster.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Friends",
+      "year": 1994,
+      "imdb": 8.9,
+      "seasons": 10,
+      "genre": "Comedy",
+      "poster": "https://image.openmoviedb.com/friends/poster.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Sherlock",
+      "year": 2010,
+      "imdb": 9.1,
+      "seasons": 4,
+      "genre": "Drama",
+      "poster": "https://image.openmoviedb.com/sherlock/poster.jpg"
+    },
+    {
+      "id": 8,
+      "name": "The Crown",
+      "year": 2016,
+      "imdb": 8.7,
+      "seasons": 4,
+      "genre": "Drama",
+      "poster": "https://image.openmoviedb.com/thecrown/poster.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Black Mirror",
+      "year": 2011,
+      "imdb": 8.8,
+      "seasons": 5,
+      "genre": "Fantasy",
+      "poster": "https://image.openmoviedb.com/blackmirror/poster.jpg"
+    },
+    {
+      "id": 10,
+      "name": "The Office",
+      "year": 2005,
+      "imdb": 8.9,
+      "seasons": 9,
+      "genre": "Comedy",
+      "poster": "https://image.openmoviedb.com/theoffice/poster.jpg"
+    }
+  ]
+}
