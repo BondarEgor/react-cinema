@@ -24,7 +24,7 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="wrapper">
+    <div className="wrapper-block">
       <FormProvider {...methods}>
         <form className="form" onSubmit={methods.handleSubmit(submitCallback)}>
           <Typography className="heading">Welcome back</Typography>
@@ -58,7 +58,7 @@ export default function AuthPage() {
             variant="outlined"
             className="loginBtn"
             type="submit"
-            color='info'
+            color='warning'
           >
             Clear
           </Button>

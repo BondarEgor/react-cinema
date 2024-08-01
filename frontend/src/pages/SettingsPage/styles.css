@@ -1,0 +1,32 @@
+.container-block {
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	gap: 10px;
+}
+
+.header-b {
+	font-size: 1.5rem;
+	font-weight: 700;
+	border-bottom: 1px solid hsl(0, 0%, 29%);
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+.btns-group {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.popular {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+.popular-amount {
+	font-size: 1.2rem;
+	font-weight: 100;
+	color: #7e7d7d;
+	margin-left: 5px;
+}
